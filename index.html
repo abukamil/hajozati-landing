@@ -1,0 +1,378 @@
+<title>حجوزاتي PRO</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="حجوزاتي: نظام حجوزات لأي نشاط، تجهّزه من محادثة واتساب وتشارك رابط الحجز مع زبائنك اليوم.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: a working ledger. Right column tells, left column shows the real WhatsApp setup chat; sections below are rows of one booking book. */
+:root{
+  --paper:#f7f9f2; --ink:#16352a; --muted:#56695f; --line:#d6e0cf;
+  --leaf:#2f7a4f; --leaf-ink:#ffffff; --chat:#e9f0e2; --bubble:#ffffff; --mine:#d7efcf;
+  --sun:#c98a1b; --panel:#ffffff;
+  --display:"Reem Kufi","IBM Plex Sans Arabic",Tahoma,sans-serif;
+  --body:"IBM Plex Sans Arabic",Tahoma,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0f1c17; --ink:#e4efe6; --muted:#9fb3a7; --line:#264036;
+  --leaf:#5fbf86; --leaf-ink:#0b1a12; --chat:#132a20; --bubble:#1b3328; --mine:#21482f;
+  --sun:#e3a945; --panel:#152720; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0f1c17; --ink:#e4efe6; --muted:#9fb3a7; --line:#264036;
+  --leaf:#5fbf86; --leaf-ink:#0b1a12; --chat:#132a20; --bubble:#1b3328; --mine:#21482f;
+  --sun:#e3a945; --panel:#152720; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.75;margin:0}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.3}
+p{margin:0}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:6px}
+
+/* header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{font-family:var(--display);font-weight:700;font-size:26px;text-decoration:none;display:flex;align-items:baseline;gap:6px}
+.brand small{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--leaf)}
+nav.links{display:flex;gap:22px;font-size:15px;color:var(--muted)}
+nav.links a{text-decoration:none}
+nav.links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 20px;border-radius:999px;font-weight:600;text-decoration:none;border:1.5px solid var(--leaf);font-family:var(--body);font-size:16px;cursor:pointer}
+.btn.solid{background:var(--leaf);color:var(--leaf-ink)}
+.btn.solid:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--leaf)}
+@media (max-width:760px){nav.links{display:none}}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding-block:64px 72px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--leaf);text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--leaf);box-shadow:0 0 0 4px color-mix(in srgb,var(--leaf) 20%,transparent)}
+.hero h1{font-size:clamp(38px,5.4vw,64px);font-weight:700;margin-top:18px;letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--leaf)}
+.hero .lede{font-size:19px;color:var(--muted);margin-top:20px;max-width:34em}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero .note{font-size:14px;color:var(--muted);margin-top:16px}
+.hero .copy{min-width:0}
+
+/* chat mock */
+.phone{background:var(--chat);border:1px solid var(--line);border-radius:28px;padding:14px;box-shadow:0 30px 60px -30px color-mix(in srgb,var(--ink) 35%,transparent);min-width:0}
+.phone-head{display:flex;align-items:center;gap:10px;padding:6px 8px 12px;border-bottom:1px solid var(--line)}
+.avatar{width:38px;height:38px;border-radius:50%;background:var(--leaf);color:var(--leaf-ink);display:grid;place-items:center;font-family:var(--display);font-weight:700}
+.phone-head b{display:block;font-size:15px;line-height:1.3}
+.phone-head span{font-size:12px;color:var(--muted)}
+.modes{display:flex;gap:6px;padding:12px 4px 4px;flex-wrap:wrap}
+.modes button{font-family:var(--body);font-size:13px;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:6px 12px;min-height:36px;cursor:pointer}
+.modes button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.thread{display:flex;flex-direction:column;gap:8px;padding:12px 4px 4px;min-height:420px}
+.msg{max-width:88%;padding:9px 13px;border-radius:14px;font-size:14.5px;line-height:1.7;white-space:pre-line;box-shadow:0 1px 0 color-mix(in srgb,var(--ink) 8%,transparent)}
+.msg.them{background:var(--bubble);align-self:flex-start;border-top-right-radius:4px}
+.msg.me{background:var(--mine);align-self:flex-end;border-top-left-radius:4px}
+.msg.summary{border-inline-start:3px solid var(--leaf)}
+.msg .t{display:block;font-family:var(--mono);font-size:10.5px;color:var(--muted);text-align:left;margin-top:2px}
+.msg strong{font-weight:600}
+@media (prefers-reduced-motion:no-preference){.thread .msg{animation:rise .35s ease both}.thread .msg:nth-child(2){animation-delay:.05s}.thread .msg:nth-child(3){animation-delay:.1s}.thread .msg:nth-child(4){animation-delay:.15s}}
+@keyframes rise{from{transform:translateY(6px)}to{transform:none}}
+
+/* sections */
+section{border-top:1px solid var(--line)}
+section .wrap{padding-block:72px}
+.sec-head{display:grid;grid-template-columns:280px 1fr;gap:40px;align-items:start}
+.sec-head .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--leaf);text-transform:uppercase;padding-top:10px}
+.sec-head h2{font-size:clamp(28px,3.4vw,40px)}
+.sec-head p{color:var(--muted);margin-top:12px;max-width:40em}
+@media (max-width:860px){.sec-head{grid-template-columns:1fr;gap:8px}.hero .wrap{grid-template-columns:1fr;gap:36px;padding-block:40px 56px}}
+
+/* steps: a true sequence */
+.steps{list-style:none;padding:0;margin:44px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s}
+.steps li{padding:22px 22px 6px;border-inline-start:1px solid var(--line);counter-increment:s;min-width:0}
+.steps li:first-child{border-inline-start:0;padding-inline-start:0}
+.steps li::before{content:counter(s);font-family:var(--display);font-size:44px;color:var(--leaf);line-height:1;display:block;margin-bottom:12px}
+.steps h3{font-size:20px}
+.steps p{color:var(--muted);font-size:15.5px;margin-top:8px}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr;row-gap:24px}.steps li:nth-child(3){border-inline-start:0;padding-inline-start:0}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}.steps li{border-inline-start:0;padding-inline-start:0;border-top:1px solid var(--line)}.steps li:first-child{border-top:0}}
+
+/* booking modes ledger */
+.ledger{margin-top:40px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--panel)}
+.ledger-row{display:grid;grid-template-columns:150px 1fr 1fr 200px;gap:20px;padding:20px 24px;border-top:1px solid var(--line);align-items:baseline}
+.ledger-row:first-child{border-top:0;background:color-mix(in srgb,var(--leaf) 8%,var(--panel));font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--muted);padding-block:12px}
+.ledger-row b{font-family:var(--display);font-size:20px;font-weight:600}
+.ledger-row span{font-size:15.5px;min-width:0}
+.ledger-row .unit{font-family:var(--mono);font-size:13px;color:var(--leaf);direction:ltr;text-align:right}
+@media (max-width:760px){.ledger-row{grid-template-columns:1fr;gap:4px}.ledger-row:first-child{display:none}.ledger-row .unit{text-align:start}}
+
+/* features */
+.features{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.feat{background:var(--paper);padding:26px;min-width:0}
+.feat h3{font-size:19px;display:flex;align-items:center;gap:10px}
+.feat h3 i{font-style:normal;font-family:var(--mono);font-size:12px;color:var(--leaf);border:1px solid var(--line);border-radius:6px;padding:1px 6px}
+.feat p{color:var(--muted);font-size:15.5px;margin-top:8px}
+@media (max-width:900px){.features{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.features{grid-template-columns:1fr}}
+
+/* trust */
+.trust{margin-top:40px;display:grid;grid-template-columns:repeat(2,1fr);gap:16px 40px}
+.trust div{display:flex;gap:14px;align-items:flex-start;min-width:0}
+.trust div::before{content:"✓";flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--leaf) 16%,transparent);color:var(--leaf);font-weight:700;font-size:14px;margin-top:2px}
+.trust b{display:block;font-weight:600}
+.trust p{color:var(--muted);font-size:15.5px}
+@media (max-width:700px){.trust{grid-template-columns:1fr}}
+
+/* status */
+.status{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{border:1px solid var(--line);border-radius:18px;padding:24px;background:var(--panel);display:flex;flex-direction:column;gap:10px;min-width:0}
+.pill{align-self:flex-start;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;padding:3px 10px;border-radius:999px;border:1px solid currentColor}
+.pill.on{color:var(--leaf)}
+.pill.soon{color:var(--sun)}
+.card h3{font-size:20px}
+.card p{color:var(--muted);font-size:15.5px;flex:1}
+.card .btn{align-self:flex-start;margin-top:6px}
+@media (max-width:900px){.status{grid-template-columns:1fr}}
+
+/* faq */
+.faq{margin-top:36px;display:grid;gap:0;border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:600;font-size:17.5px;display:flex;justify-content:space-between;gap:16px;min-height:44px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--mono);color:var(--leaf);font-size:20px;line-height:1}
+details[open] summary::after{content:"−"}
+details p{color:var(--muted);padding:0 0 20px;max-width:46em}
+
+/* final cta */
+.final .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
+.final h2{font-size:clamp(28px,3.6vw,44px)}
+.final p{color:var(--muted);margin-top:8px}
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-block:28px;display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;color:var(--muted);font-size:14px}
+footer nav{display:flex;flex-wrap:wrap;gap:4px 18px}
+footer a{display:inline-flex;align-items:center;min-height:44px}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">حجوزاتي <small>PRO</small></a>
+    <nav class="links" aria-label="أقسام الصفحة">
+      <a href="#how">كيف يعمل</a>
+      <a href="#modes">أنواع الحجز</a>
+      <a href="#features">المزايا</a>
+      <a href="#try">جرّب الآن</a>
+      <a href="#faq">أسئلة</a>
+    </nav>
+    <a class="btn solid" href="https://hajozati-api-trial.up.railway.app/start.html" target="_blank" rel="noopener">ابدأ مجاناً</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div class="copy">
+        <p class="eyebrow">نظام حجوزات لأي نشاط</p>
+        <h1>صف نشاطك في محادثة.<br><em>واستلم نظام حجوزاتك جاهزاً.</em></h1>
+        <p class="lede">تكتب لحجوزاتي على واتساب كما تكلّم موظفاً: خدماتك، أسعارك، ساعات عملك، وغرفك أو سياراتك أو كراسيك. المساعد يرتّبها في خطة واضحة، وأنت توافق عليها قبل أن يُنشأ أي شيء. بعدها تحصل على لوحة إدارة ورابط حجز تشاركه مع زبائنك.</p>
+        <div class="ctas">
+          <a class="btn solid" href="https://hajozati-api-trial.up.railway.app/start.html" target="_blank" rel="noopener">أنشئ مساحة نشاطك ←</a>
+          <a class="btn ghost" href="#how">شاهد كيف يعمل</a>
+        </div>
+        <p class="note">التجربة مجانية خلال الإطلاق التجريبي، دون بطاقة دفع.</p>
+      </div>
+
+      <div class="phone" aria-label="مثال لمحادثة تجهيز نشاط على واتساب">
+        <div class="phone-head">
+          <div class="avatar" aria-hidden="true">ح</div>
+          <div><b>حجوزاتي · مساعد التجهيز</b><span>مثال توضيحي لمحادثة حقيقية</span></div>
+        </div>
+        <div class="modes" role="group" aria-label="اختر نوع النشاط في المثال">
+          <button type="button" id="m-appointment" data-mode="appointment" aria-pressed="true">صالون · موعد</button>
+          <button type="button" id="m-hourly" data-mode="hourly" aria-pressed="false">قاعة · بالساعة</button>
+          <button type="button" id="m-daily" data-mode="daily" aria-pressed="false">تأجير سيارات · باليوم</button>
+        </div>
+        <div class="thread" id="thread" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">كيف يعمل</p>
+        <div>
+          <h2>من أول رسالة إلى أول حجز.</h2>
+          <p>لا نماذج طويلة ولا إعدادات معقدة. المحادثة تجمع التفاصيل، والملخص يحمي قرارك.</p>
+        </div>
+      </div>
+      <ol class="steps">
+        <li><h3>تحكي عن نشاطك</h3><p>بالعربية وبأسلوبك. المساعد يسأل سؤالاً أو سؤالين في كل مرة عمّا ينقص فقط.</p></li>
+        <li><h3>تراجع الملخص</h3><p>الخدمات والأسعار والمدد والسعة وساعات العمل وأيام الإغلاق في رسالة واحدة. عدّل ما تريد قبل الموافقة.</p></li>
+        <li><h3>توافق صراحة</h3><p>لا يُنشأ شيء إلا بعد أن ترسل «أوافق وأؤكد». أي تعديل بعد الملخص يلغيه ويعرض ملخصاً جديداً.</p></li>
+        <li><h3>تستلم مساحتك</h3><p>رابط دخول خاص لمرة واحدة، لوحة لإدارة الحجوزات، ورابط حجز جاهز للمشاركة.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="modes">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">أنواع الحجز</p>
+        <div>
+          <h2>ثلاث طرق للحجز. نشاطك يختار ما يناسبه.</h2>
+          <p>لا نفترض أن كل نشاط صالون أو كل حجز موعد. لكل خدمة نوعها ووحدتها وسعرها.</p>
+        </div>
+      </div>
+      <div class="ledger" role="table" aria-label="أنواع الحجز">
+        <div class="ledger-row" role="row"><span role="columnheader">النوع</span><span role="columnheader">يناسب</span><span role="columnheader">ما يختاره الزبون</span><span role="columnheader">الوحدة</span></div>
+        <div class="ledger-row" role="row"><b role="cell">موعد</b><span role="cell">صالونات، عيادات، استشارات، تدريب</span><span role="cell">اليوم والوقت، والمدة ثابتة حسب الخدمة</span><span class="unit" role="cell">60 min · slot 30</span></div>
+        <div class="ledger-row" role="row"><b role="cell">بالساعة</b><span role="cell">قاعات، ملاعب، استوديوهات، معدات</span><span role="cell">وقت البدء وعدد الساعات بمضاعفات فاصل الخدمة</span><span class="unit" role="cell">per hour · 120–240 min</span></div>
+        <div class="ledger-row" role="row"><b role="cell">باليوم</b><span role="cell">تأجير سيارات، شقق مفروشة، فنادق</span><span role="cell">تاريخ الاستلام وعدد الأيام أو الليالي</span><span class="unit" role="cell">per day · check-in / out</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">المزايا</p>
+        <div>
+          <h2>التفاصيل التي تمنع الحجز المزدوج.</h2>
+          <p>النظام مبني على ما يحدث فعلاً في أي نشاط: موارد مشتركة، ورديات ليلية، وزبائن يحجزون في نفس اللحظة.</p>
+        </div>
+      </div>
+      <div class="features">
+        <div class="feat"><h3>الموارد والسعة <i>units · seats</i></h3><p>غرفة واحدة لخدمتين، أو قاعة بعشرين مقعداً. السعة تُحسب على المورد المشترك وعلى الخدمة معاً.</p></div>
+        <div class="feat"><h3>ورديات تمتد لليوم التالي</h3><p>من 8 مساءً إلى 2 فجراً تبقى وردية واحدة، مع حساب صحيح عند تغيير التوقيت الصيفي.</p></div>
+        <div class="feat"><h3>السعر قبل التأكيد</h3><p>الزبون يرى المبلغ قبل أن يؤكد، والنظام يعيد التحقق من السعر والسعة لحظة الحفظ.</p></div>
+        <div class="feat"><h3>أي عملة وأي منطقة زمنية</h3><p>ريال، درهم، دينار، جنيه، دولار. الأوقات تُحفظ بتوقيت نشاطك وتُعرض كما يعرفها زبونك.</p></div>
+        <div class="feat"><h3>تحويل لموظف عند الحاجة</h3><p>الحالات الاستثنائية تُحوَّل لفريقك، ويتوقف الرد الآلي في تلك المحادثة حتى تعيده.</p></div>
+        <div class="feat"><h3>ربط نظامك الحالي</h3><p>إن كان لديك موقع أو نظام حجوزات، نراجع ربطه ومزامنة الحجز والإلغاء في الاتجاهين.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="trust">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">الأمان</p>
+        <div>
+          <h2>بيانات كل نشاط منفصلة. وقرارك محمي.</h2>
+        </div>
+      </div>
+      <div class="trust">
+        <div><p><b>لا شيء بدون موافقتك</b>المساعد يكتب مسودة فقط. الإنشاء يحتاج نص الموافقة كما هو، وانتهاء مهلة الملخص يعيد عرضه.</p></div>
+        <div><p><b>رابط دخول لمرة واحدة</b>صالح لساعة، ويُستبدل مفتاحك القديم وجلساته ومفاتيح التكامل عند استلامه.</p></div>
+        <div><p><b>عزل كامل بين المنشآت</b>كل نشاط يرى حجوزاته وزبائنه فقط، ورقم المنصة لا يمكن ربطه بأي منشأة.</p></div>
+        <div><p><b>لا كلمات مرور في المحادثة</b>لا نطلب أسراراً على واتساب، ولا نحفظ رابط الدخول في سجل الرسائل.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="try">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">جرّب الآن</p>
+        <div>
+          <h2>ما المتاح اليوم.</h2>
+          <p>نحن في إطلاق تجريبي. هذا ما يعمل الآن، وما يُفعَّل بعده.</p>
+        </div>
+      </div>
+      <div class="status">
+        <div class="card">
+          <span class="pill on">متاح الآن</span>
+          <h3>مساحة النشاط ورابط الحجز</h3>
+          <p>أنشئ مساحتك من المتصفح في دقائق: خدمة، سعر، ساعات عمل. تحصل على لوحة إدارة ورابط حجز تشاركه مع زبائنك.</p>
+          <a class="btn solid" href="https://hajozati-api-trial.up.railway.app/start.html" target="_blank" rel="noopener">أنشئ مساحتك ←</a>
+        </div>
+        <div class="card">
+          <span class="pill soon">تجربة بدعوة</span>
+          <h3>التجهيز عبر واتساب</h3>
+          <p>مساعد التجهيز يعمل على رقم تجريبي لعدد محدود من المختبرين. اطلب دعوة من فريق حجوزاتي لإضافة رقمك.</p>
+        </div>
+        <div class="card">
+          <span class="pill soon">بعد التفعيل الرسمي</span>
+          <h3>بوت الحجز على رقم نشاطك</h3>
+          <p>زبائنك يحجزون على رقم واتساب نشاطك نفسه، بعد إثبات ملكية الرقم واعتماد Meta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">أسئلة</p>
+        <div><h2>قبل أن تبدأ.</h2></div>
+      </div>
+      <div class="faq">
+        <details><summary>هل يناسب نشاطي؟</summary><p>إذا كان زبائنك يحجزون وقتاً أو مكاناً أو شيئاً، فغالباً نعم: صالونات، عيادات، قاعات، ملاعب، تأجير سيارات، شقق، تدريب، واستشارات. أنواع الحجز الثلاثة تغطي أغلب الحالات.</p></details>
+        <details><summary>هل أحتاج رقم واتساب جديداً؟</summary><p>لا تحتاجه للبدء. رابط الحجز يعمل الآن وتشاركه من رقمك الحالي. وعند تفعيل البوت على رقم نشاطك نستخدم رقماً تملكه أنت بعد إثبات ملكيته.</p></details>
+        <details><summary>ماذا لو أخطأت في معلومة بعد الملخص؟</summary><p>اكتب التعديل فقط. أي رسالة غير الموافقة تلغي الملخص السابق، ويعرض المساعد ملخصاً جديداً. ولا يُنشأ نشاطك بالبيانات القديمة أبداً.</p></details>
+        <details><summary>هل يمكن ربطه بنظامي الحالي؟</summary><p>نراجع ذلك حسب الواجهات والصلاحيات التي يتيحها مزود نظامك، ونختبر التوفر والحجز والإلغاء ومنع التكرار قبل التشغيل. لا نثبّت شيئاً على نظامك دون اتفاق.</p></details>
+        <details><summary>كم التكلفة؟</summary><p>التجربة الحالية مجانية ولا تتطلب بطاقة دفع. لن يُحسب عليك أي مبلغ دون موافقتك.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <div>
+        <h2>ابدأ بخدمة واحدة. وأضف الباقي لاحقاً.</h2>
+        <p>مساحتك ورابط الحجز جاهزان في دقائق.</p>
+      </div>
+      <a class="btn solid" href="https://hajozati-api-trial.up.railway.app/start.html" target="_blank" rel="noopener">أنشئ مساحة نشاطك ←</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>حجوزاتي PRO · إطلاق تجريبي 2026</span>
+    <nav aria-label="روابط قانونية">
+      <a href="https://hajozati-api-trial.up.railway.app/privacy.html" target="_blank" rel="noopener">الخصوصية</a>
+      <a href="https://hajozati-api-trial.up.railway.app/terms.html" target="_blank" rel="noopener">الشروط</a>
+      <a href="https://hajozati-api-trial.up.railway.app/dashboard.html" target="_blank" rel="noopener">دخول أصحاب الأنشطة</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const examples = {
+    appointment: [
+      ["me", "السلام عليكم، عندي صالون نسائي في جدة. قص وصبغة، وأشتغل من السبت للخميس من 10 الصبح إلى 10 بالليل."],
+      ["them", "أهلاً بك! كم سعر القص ومدته؟ وكم كرسي عندك يشتغل في نفس الوقت؟"],
+      ["me", "القص 120 ريال ساعة كاملة، الصبغة 350 ساعتين. عندي 3 كراسي."],
+      ["summary", "راجع إعداد نشاطك قبل إنشائه:\n<strong>صالون لمسة</strong> · جدة · SAR\nقص: 120 SAR / موعد، المدة 60 دقيقة\nصبغة: 350 SAR / موعد، المدة 120 دقيقة\nالسبت–الخميس 10:00–22:00 · فاصل البدء 30 دقيقة\nالموارد: 3 كراسي\nللموافقة أرسل «أوافق وأؤكد»."],
+    ],
+    hourly: [
+      ["me", "عندي قاعة اجتماعات في الرياض، تتسع 20 شخص، أأجرها بالساعة."],
+      ["them", "ممتاز. كم سعر الساعة؟ وما أقل وأطول مدة للحجز؟"],
+      ["me", "200 ريال للساعة، والحجز من ساعتين، يومياً من 8 الصبح إلى 12 بالليل."],
+      ["summary", "راجع إعداد نشاطك قبل إنشائه:\n<strong>قاعة المجلس</strong> · الرياض · SAR\nحجز القاعة: 200 SAR / بالساعة، السعة 20 مقعد، مدة الحجز الافتراضية 120 دقيقة\nيومياً 08:00–24:00 · فاصل البدء 60 دقيقة\nللموافقة أرسل «أوافق وأؤكد»."],
+    ],
+    daily: [
+      ["me", "مكتب تأجير سيارات في دبي، عندي 4 سيارات سيدان و2 عائلية."],
+      ["them", "كم سعر اليوم لكل فئة؟ وهل تطلبون مهلة قبل الاستلام؟"],
+      ["me", "السيدان 150 درهم، العائلية 260. نحتاج 3 ساعات قبل الاستلام."],
+      ["summary", "راجع إعداد نشاطك قبل إنشائه:\n<strong>مسار لتأجير السيارات</strong> · دبي · AED\nسيدان: 150 AED / باليوم، السعة 4 وحدة\nعائلية: 260 AED / باليوم، السعة 2 وحدة\nمهلة الحجز 180 دقيقة · الحجز بالأيام\nللموافقة أرسل «أوافق وأؤكد»."],
+    ],
+  };
+  const thread = document.getElementById("thread");
+  const buttons = document.querySelectorAll(".modes button");
+  const times = ["9:41", "9:41", "9:42", "9:42"];
+  function render(mode) {
+    thread.textContent = "";
+    examples[mode].forEach(([who, html], i) => {
+      const el = document.createElement("div");
+      el.className = "msg " + (who === "me" ? "me" : who === "summary" ? "them summary" : "them");
+      el.innerHTML = html + '<span class="t">' + times[i] + "</span>";
+      thread.appendChild(el);
+    });
+    buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.mode === mode)));
+  }
+  buttons.forEach((b) => b.addEventListener("click", () => render(b.dataset.mode)));
+  render("appointment");
+})();
+</script>
