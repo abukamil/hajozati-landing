@@ -1,0 +1,14 @@
+name: Keep app awake
+# Render's free plan sleeps after 15 idle minutes; a sleeping app can miss WhatsApp webhooks.
+# Backup for an UptimeRobot monitor. Scheduled runs are best effort, so they may arrive late.
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+permissions: {}
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - run: curl -fsS --retry 3 --retry-delay 20 --max-time 90 https://hajozati.onrender.com/health
