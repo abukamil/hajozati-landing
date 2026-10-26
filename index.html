@@ -178,6 +178,20 @@ footer{border-top:1px solid var(--line)}
 footer .wrap{padding-block:28px;display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;color:var(--muted);font-size:14px}
 footer nav{display:flex;flex-wrap:wrap;gap:4px 18px}
 footer a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px}
+
+/* video walkthroughs */
+.watch{margin-top:40px;display:grid;grid-template-columns:minmax(0,360px) 1fr;gap:48px;align-items:center}
+.watch.wide{grid-template-columns:1fr}
+.clip{position:relative;border-radius:22px;overflow:hidden;background:var(--chat);border:1px solid var(--line);box-shadow:0 24px 50px -30px rgba(22,53,42,.5)}
+.clip video{display:block;width:100%;height:auto;background:var(--chat)}
+.clip.tall video{aspect-ratio:9/16}
+.clip.wide video{aspect-ratio:16/9}
+.watch ul{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.watch li{padding-inline-start:28px;position:relative;color:var(--muted)}
+.watch li b{color:var(--ink)}
+.watch li::before{content:"";position:absolute;inset-inline-start:4px;top:.72em;width:10px;height:10px;border-radius:50%;background:var(--sun)}
+.clip-note{font-size:14px;color:var(--muted);margin-top:12px}
+@media (max-width:860px){.watch{grid-template-columns:1fr;gap:28px}.clip.tall{max-width:360px;margin-inline:auto}}
 </style>
 
 </head>
@@ -186,10 +200,12 @@ footer a{display:inline-flex;align-items:center;justify-content:center;min-heigh
   <div class="wrap">
     <a class="brand" href="#top">حجوزاتي <small>PRO</small></a>
     <nav class="links" aria-label="أقسام الصفحة">
+      <a href="#demo">شاهد المحادثة</a>
       <a href="#how">كيف يعمل</a>
       <a href="#modes">أنواع الحجز</a>
       <a href="#features">المزايا</a>
       <a href="#try">جرّب الآن</a>
+      <a href="#setup">الإعدادات</a>
       <a href="#faq">أسئلة</a>
     </nav>
     <a class="btn solid" href="https://hajozati.onrender.com/start.html" target="_blank" rel="noopener">ابدأ مجاناً</a>
@@ -224,6 +240,35 @@ footer a{display:inline-flex;align-items:center;justify-content:center;min-heigh
       </div>
     </div>
   </div>
+
+  <section id="demo">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">شاهد المحادثة</p>
+        <div>
+          <h2>هكذا تبدو محادثة التجهيز على واتساب.</h2>
+          <p>من أول رسالة حتى استلام نظام حجوزاتك: أسئلة قصيرة واحداً تلو الآخر، شرح لأي كلمة غير واضحة، وملخص تراجعه قبل إنشاء أي شيء.</p>
+        </div>
+      </div>
+      <div class="watch">
+        <div class="clip tall">
+          <video data-lazy-video muted playsinline loop controls preload="none" poster="media/whatsapp-demo.jpg" aria-label="فيديو مثال لمحادثة تجهيز صالون على واتساب حتى إنشاء نظام الحجوزات" width="720" height="1280">
+            <source data-src="media/whatsapp-demo.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div>
+          <ul>
+            <li><b>تبدأ برسالة واحدة.</b> اضغط «ابدأ على واتساب» واكتب «مرحباً، أريد تجهيز نشاطي».</li>
+            <li><b>سؤال واحد في كل مرة.</b> اسم النشاط والمدينة، ثم الخدمات وأسعارها ومدتها، ثم ساعات العمل والسياسات.</li>
+            <li><b>ما فهمت كلمة؟ اسأل.</b> اكتب «شو يعني السعة؟» والمساعد يشرحها بمثال من مجالك.</li>
+            <li><b>الملخص قبل الإنشاء.</b> لا يُنشأ شيء حتى ترسل «أوافق وأؤكد».</li>
+            <li><b>تستلم مساحتك فوراً.</b> رابط دخول للوحة التحكم، رابط حجز جاهز، ودليل مصوّر.</li>
+          </ul>
+          <p class="clip-note">مثال توضيحي مبني على محادثة التجهيز الفعلية. الأسماء والأرقام تجريبية.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id="how">
     <div class="wrap">
@@ -329,6 +374,25 @@ footer a{display:inline-flex;align-items:center;justify-content:center;min-heigh
     </div>
   </section>
 
+  <section id="setup">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker">ضبط الإعدادات</p>
+        <div>
+          <h2>اضبط إعداداتك لأعلى استفادة.</h2>
+          <p>جولة في لوحة التحكم خطوة بخطوة: الخدمات والأوقات، ساعات العمل والعطل، الموظفون والموارد، التوقيت والعملة، رابط الحجز ورمز QR، والربط مع واتساب وتقويم Google.</p>
+        </div>
+      </div>
+      <div class="watch wide">
+        <div class="clip wide">
+          <video data-lazy-video muted playsinline loop controls preload="none" poster="media/settings-guide.jpg" aria-label="فيديو يشرح ضبط إعدادات حجوزاتي في لوحة التحكم" width="1280" height="720">
+            <source data-src="media/settings-guide.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="faq">
     <div class="wrap">
       <div class="sec-head">
@@ -367,6 +431,35 @@ footer a{display:inline-flex;align-items:center;justify-content:center;min-heigh
   </div>
 </footer>
 
+<script>
+// Videos load only when scrolled near, and autoplay muted unless the viewer prefers reduced motion.
+(() => {
+  const videos = document.querySelectorAll("video[data-lazy-video]");
+  const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const load = (v) => {
+    if (v.dataset.loaded) return;
+    v.dataset.loaded = "1";
+    for (const s of v.querySelectorAll("source[data-src]")) s.src = s.dataset.src;
+    v.load();
+  };
+  if (!("IntersectionObserver" in window)) { videos.forEach(load); return; }
+  const near = new IntersectionObserver((entries) => {
+    for (const e of entries) if (e.isIntersecting) { load(e.target); near.unobserve(e.target); }
+  }, { rootMargin: "300px 0px" });
+  const seen = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      const v = e.target;
+      if (e.isIntersecting && !still && !v.dataset.userPaused) { load(v); v.play().catch(() => {}); }
+      else if (!e.isIntersecting && !v.paused) { v.dataset.auto = "1"; v.pause(); }
+    }
+  }, { threshold: 0.5 });
+  videos.forEach((v) => {
+    near.observe(v); seen.observe(v);
+    v.addEventListener("pause", () => { if (!v.dataset.auto && document.visibilityState === "visible") v.dataset.userPaused = "1"; delete v.dataset.auto; });
+    v.addEventListener("play", () => { delete v.dataset.userPaused; });
+  });
+})();
+</script>
 <script>
 (() => {
   const examples = {
