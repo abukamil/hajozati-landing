@@ -9,6 +9,7 @@
     <link rel="canonical" href="https://abukamil.github.io/hajozati-landing/" />
     <link rel="icon" type="image/png" href="app-icon.png" />
     <link rel="apple-touch-icon" href="app-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <meta name="theme-color" content="#102b26" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ar_AR" />
@@ -842,6 +843,15 @@
       }
       .final::after {
         pointer-events: none;
+      }
+      .footer-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .footer-brand .project-icon {
+        width: 28px;
+        height: 28px;
       }
       footer .wrap {
         padding-block: 26px 36px;
@@ -1776,7 +1786,15 @@
 
     <footer>
       <div class="wrap">
-        <span>حجوزاتي PRO · إطلاق تجريبي 2026</span>
+        <span class="footer-brand"
+          ><img
+            class="project-icon"
+            src="app-icon.png"
+            width="28"
+            height="28"
+            alt=""
+          />حجوزاتي PRO · إطلاق تجريبي 2026</span
+        >
         <nav aria-label="روابط قانونية">
           <a
             href="https://hajozati.onrender.com/privacy.html"
