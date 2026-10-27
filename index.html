@@ -1,292 +1,1872 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="canonical" href="https://abukamil.github.io/hajozati-landing/">
-<link rel="icon" type="image/png" href="app-icon.png">
-<link rel="apple-touch-icon" href="app-icon.png">
-<meta name="theme-color" content="#102b26">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="ar_AR">
-<meta property="og:site_name" content="حجوزاتي PRO">
-<meta property="og:title" content="حجوزاتي | حجوزات نشاطك على رقمك">
-<meta property="og:description" content="حجوزاتي: نظام حجوزات لأي نشاط، تجهّزه من محادثة واتساب وتشارك رابط الحجز مع زبائنك اليوم.">
-<meta property="og:url" content="https://abukamil.github.io/hajozati-landing/">
-<meta property="og:image" content="https://abukamil.github.io/hajozati-landing/social-card.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="حجوزاتي: كل مواعيد نشاطك في مساحة واحدة">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="حجوزاتي | حجوزات نشاطك على رقمك">
-<meta name="twitter:description" content="حجوزاتي: نظام حجوزات لأي نشاط، تجهّزه من محادثة واتساب وتشارك رابط الحجز مع زبائنك اليوم.">
-<meta name="twitter:image" content="https://abukamil.github.io/hajozati-landing/social-card.png">
-<title>حجوزاتي PRO</title>
-<meta name="description" content="حجوزاتي: نظام حجوزات لأي نشاط، تجهّزه من محادثة واتساب وتشارك رابط الحجز مع زبائنك اليوم.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
-<style>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <link rel="canonical" href="https://abukamil.github.io/hajozati-landing/" />
+    <link rel="icon" type="image/png" href="app-icon.png" />
+    <link rel="apple-touch-icon" href="app-icon.png" />
+    <meta name="theme-color" content="#102b26" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:site_name" content="حجوزاتي PRO" />
+    <meta property="og:title" content="حجوزاتي | حجوزات نشاطك على رقمك" />
+    <meta
+      property="og:description"
+      content="حجوزاتي: نظام حجوزات لأي نشاط، تجهّزه من محادثة واتساب وتشارك رابط الحجز مع زبائنك اليوم."
+    />
+    <meta
+      property="og:url"
+      content="https://abukamil.github.io/hajozati-landing/"
+    />
+    <meta
+      property="og:image"
+      content="https://abukamil.github.io/hajozati-landing/social-card.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="حجوزاتي: كل مواعيد نشاطك في مساحة واحدة"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="حجوزاتي | حجوزات نشاطك على رقمك" />
+    <meta
+      name="twitter:description"
+      content="حجوزاتي: نظام حجوزات لأي نشاط، تجهّزه من محادثة واتساب وتشارك رابط الحجز مع زبائنك اليوم."
+    />
+    <meta
+      name="twitter:image"
+      content="https://abukamil.github.io/hajozati-landing/social-card.png"
+    />
+    <title>حجوزاتي PRO</title>
+    <meta
+      name="description"
+      content="حجوزاتي: نظام حجوزات لأي نشاط، تجهّزه من محادثة واتساب وتشارك رابط الحجز مع زبائنك اليوم."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap"
+    />
+    <style>
+      :root {
+        --paper: #f5f5ef;
+        --panel: #fff;
+        --ink: #17362e;
+        --muted: #6b7770;
+        --line: #dce2d9;
+        --leaf: #205c47;
+        --sun: #b1cc71;
+        --chat: #102d26;
+        --display: "Readex Pro", sans-serif;
+        --body: "IBM Plex Sans Arabic", sans-serif;
+        color-scheme: light;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-padding-top: 100px;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font: 17px/1.85 var(--body);
+        -webkit-font-smoothing: antialiased;
+      }
+      a {
+        color: inherit;
+      }
+      p,
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: var(--display);
+        font-weight: 500;
+        line-height: 1.6;
+        letter-spacing: -0.6px;
+        text-wrap: balance;
+      }
+      h2 em {
+        font-style: normal;
+        color: #7b8d7c;
+      }
+      .wrap {
+        width: 100%;
+        max-width: 1240px;
+        padding-inline: 40px;
+        margin-inline: auto;
+      }
+      button,
+      a,
+      summary {
+        -webkit-tap-highlight-color: transparent;
+      }
+      :focus-visible {
+        outline: 3px solid #98b746;
+        outline-offset: 5px;
+      }
+      a {
+        text-decoration: none;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 52px;
+        border-radius: 9px;
+        padding: 12px 23px;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 1.6;
+        border: 1px solid transparent;
+        transition:
+          transform 0.2s,
+          background 0.2s;
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+      .btn.solid {
+        background: var(--leaf);
+        color: #fff;
+      }
+      .btn.ghost {
+        border-color: var(--line);
+        background: transparent;
+      }
+      .wa-ico {
+        width: 20px;
+        height: 20px;
+        flex: none;
+      }
+      header.top {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        background: #f5f5eff5;
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid #dde2d7;
+      }
+      header.top .wrap {
+        height: 84px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 22px;
+      }
+      .brand {
+        font-family: var(--display);
+        font-size: 28px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        letter-spacing: -1px;
+      }
+      .brand small {
+        font-family: var(--body);
+        font-size: 10px;
+        letter-spacing: 1px;
+        color: #40634f;
+        border: 1px solid #bac9b3;
+        border-radius: 4px;
+        padding: 0 5px;
+      }
+      nav.links {
+        display: flex;
+        gap: 30px;
+        font-size: 14px;
+        color: #596c5e;
+      }
+      nav.links a:hover {
+        color: var(--leaf);
+      }
+      header .btn {
+        background: transparent !important;
+        border: 1px solid #b7c5b1 !important;
+        color: var(--ink) !important;
+        font-size: 14px;
+        min-height: 44px;
+      }
+      .hero {
+        background: #102d26;
+        color: #fff;
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        width: 650px;
+        height: 650px;
+        left: -240px;
+        top: 0;
+        border: 1px solid #d3ebad14;
+        border-radius: 50%;
+        box-shadow:
+          0 0 0 95px #d3ebad05,
+          0 0 0 190px #d3ebad04;
+        z-index: -1;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at 30% 50%,
+          #36533d55,
+          transparent 60%
+        );
+        z-index: -1;
+      }
+      .hero .wrap {
+        display: grid;
+        grid-template-columns: 1.18fr 0.82fr;
+        gap: 80px;
+        align-items: center;
+        padding-block: 48px 56px;
+      }
+      .hero .copy {
+        padding-block: 30px;
+        min-width: 0;
+      }
+      .eyebrow {
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #d9e4c3;
+      }
+      .eyebrow::before {
+        content: "";
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+        background: #c2de8a;
+        box-shadow: 0 0 0 5px #b5d27712;
+      }
+      .hero h1 {
+        font-size: clamp(38px, 4.15vw, 57px);
+        margin-top: 26px;
+        line-height: 1.65;
+        letter-spacing: -1.4px;
+      }
+      .hero h1 em {
+        color: #c6dc9d;
+        font-style: normal;
+      }
+      .hero .lede {
+        font-size: 18px;
+        line-height: 2;
+        color: #bbc9bf;
+        max-width: 470px;
+        margin-top: 23px;
+      }
+      .ctas {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+      }
+      .hero .btn.solid {
+        background: #d2e8ac;
+        color: #19382d;
+      }
+      .hero .btn.ghost {
+        color: #e9ede2;
+        border-color: #627361;
+        background: #ffffff04;
+      }
+      .hero .note {
+        margin-top: 15px;
+        font-size: 12px;
+        color: #9caf9f;
+      }
+      .hero .note span {
+        margin-inline-start: 18px;
+      }
+      .hero-benefits {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-top: 40px;
+        padding-top: 23px;
+        border-top: 1px solid #b9ccab26;
+        max-width: 440px;
+      }
+      .hero-benefits div {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .hero-benefits b {
+        font-family: var(--display);
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: #b0c994;
+      }
+      .hero-benefits span {
+        font-size: 13px;
+        color: #d1dccd;
+      }
+      .video-stage {
+        position: relative;
+        width: 100%;
+        max-width: 307px;
+        justify-self: center;
+      }
+      .video-heading {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 11px;
+        color: #bdcdbd;
+        margin-bottom: 13px;
+      }
+      .video-duration {
+        margin-inline-start: auto;
+        color: #c4da9d;
+      }
+      .live-dot {
+        width: 5px;
+        height: 5px;
+        background: #c2db94;
+        border-radius: 50%;
+      }
+      .clip {
+        overflow: hidden;
+        border-radius: 18px;
+        background: var(--chat);
+      }
+      .clip video {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .clip.tall video {
+        aspect-ratio: 9/16;
+        object-fit: contain;
+      }
+      .clip.wide video {
+        aspect-ratio: 16/9;
+      }
+      .hero-video {
+        border: 5px solid #e3e9d6;
+        border-radius: 26px;
+        box-shadow: 0 26px 55px #0005;
+        position: relative;
+      }
+      .video-caption {
+        font-size: 13px;
+        margin-top: 15px;
+        position: relative;
+        padding-inline-start: 37px;
+        color: #eff3e9;
+      }
+      .video-caption > span:last-child {
+        display: block;
+        font-size: 10px;
+        color: #8ea991;
+      }
+      .caption-icon {
+        position: absolute;
+        inset-inline-start: 0;
+        top: 3px;
+        width: 27px;
+        height: 27px;
+        border: 1px solid #6c845b;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: #b8d18d;
+        font-size: 18px;
+      }
+      .orbit-label {
+        position: absolute;
+        left: -66px;
+        top: 60px;
+        z-index: 2;
+        background: #f0f2e6;
+        color: #6d7b6a;
+        padding: 12px 16px;
+        border-radius: 9px;
+        font-size: 10px;
+        box-shadow: 0 8px 30px #0002;
+        transform: rotate(-6deg);
+        pointer-events: none;
+      }
+      .orbit-label b {
+        display: block;
+        color: #294937;
+        font-weight: 500;
+        font-size: 11px;
+      }
+      .sector-strip {
+        background: #e9ecdf;
+        border-bottom: 1px solid #d9dfce;
+      }
+      .sector-strip .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding-block: 25px;
+      }
+      .sector-strip span {
+        font-size: 12px;
+        color: #72816c;
+      }
+      .sector-strip b {
+        font-family: var(--display);
+        font-size: 13px;
+        font-weight: 400;
+        color: #53624c;
+      }
+      section .wrap {
+        padding-block: 88px;
+      }
+      .sec-head {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        gap: 35px;
+      }
+      .kicker {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 13px;
+        color: #708169;
+        padding-top: 10px;
+      }
+      .kicker::before {
+        content: "";
+        width: 23px;
+        height: 1px;
+        background: #8b9b6b;
+      }
+      .sec-head h2 {
+        font-size: clamp(27px, 3.2vw, 40px);
+      }
+      .sec-head p:not(.kicker) {
+        font-size: 16px;
+        color: var(--muted);
+        max-width: 640px;
+        margin-top: 16px;
+      }
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        list-style: none;
+        counter-reset: step;
+        padding: 0;
+        margin: 40px 0 0;
+        gap: 0;
+      }
+      .steps li {
+        counter-increment: step;
+        padding: 0 24px;
+        border-inline-start: 1px solid #d6dece;
+      }
+      .steps li:first-child {
+        padding-inline-start: 0;
+        border: 0;
+      }
+      .steps li::before {
+        content: "0" counter(step);
+        font-family: var(--display);
+        font-size: 12px;
+        color: #86936f;
+        display: block;
+        margin-bottom: 22px;
+      }
+      .steps h3 {
+        font-size: 18px;
+      }
+      .steps p {
+        font-size: 14px;
+        color: var(--muted);
+        margin-top: 10px;
+        line-height: 1.9;
+      }
+      #modes {
+        background: #e9eddf;
+      }
+      .ledger {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 36px;
+      }
+      .ledger-row {
+        background: #f7f8f2;
+        border: 1px solid #d6ddcb;
+        border-radius: 14px;
+        padding: 28px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        position: relative;
+        min-width: 0;
+      }
+      .ledger-row::before {
+        content: "↗";
+        position: absolute;
+        left: 23px;
+        top: 23px;
+        width: 33px;
+        height: 33px;
+        border: 1px solid #ced8bf;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: #748b58;
+      }
+      .ledger-row b {
+        font-family: var(--display);
+        font-size: 26px;
+        font-weight: 500;
+        margin-bottom: 8px;
+      }
+      .ledger-row span {
+        font-size: 14px;
+        color: #697562;
+      }
+      .ledger-row span:nth-child(3) {
+        border-top: 1px solid #dde4d3;
+        padding-top: 15px;
+        margin-top: 5px;
+        width: 100%;
+        min-height: 68px;
+      }
+      .ledger-row .unit {
+        font-size: 11px;
+        color: #42623a;
+        background: #e9efdf;
+        padding: 3px 9px;
+        border-radius: 4px;
+      }
+      #features {
+        background: #fafbf7;
+      }
+      .features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        margin-top: 35px;
+      }
+      .feat {
+        padding: 30px;
+        border-bottom: 1px solid var(--line);
+        min-width: 0;
+      }
+      .feat:nth-child(-n + 3) {
+        border-top: 1px solid var(--line);
+      }
+      .feat:not(:nth-child(3n)) {
+        border-inline-end: 1px solid var(--line);
+      }
+      .feature-icon {
+        display: grid;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        background: #edf0e4;
+        border-radius: 10px;
+        color: #56733e;
+        margin-bottom: 20px;
+      }
+      .feature-icon svg {
+        width: 23px;
+        height: 23px;
+      }
+      .feat h3 {
+        font-size: 17px;
+      }
+      .feat p {
+        font-size: 14px;
+        color: var(--muted);
+        line-height: 1.95;
+        margin-top: 12px;
+      }
+      #trust {
+        background: #15362b;
+        color: #edf2e3;
+      }
+      #trust .wrap {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 80px;
+      }
+      #trust .sec-head {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+      }
+      #trust .kicker {
+        color: #a6be8b;
+      }
+      #trust h2 {
+        font-size: 34px;
+        line-height: 1.8;
+      }
+      .trust {
+        display: grid;
+        gap: 20px;
+      }
+      .trust div {
+        display: flex;
+        gap: 17px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #d6e4bf26;
+      }
+      .trust div:last-child {
+        border: 0;
+        padding: 0;
+      }
+      .trust div::before {
+        content: "✓";
+        display: grid;
+        place-items: center;
+        flex: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #d1e6a918;
+        color: #bad496;
+        font-size: 13px;
+        margin-top: 5px;
+      }
+      .trust p {
+        font-size: 13px;
+        color: #a8bfac;
+        line-height: 1.9;
+      }
+      .trust b {
+        display: block;
+        color: #e5eddc;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 4px;
+      }
+      .status {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 38px;
+      }
+      .card {
+        border: 1px solid #dce2d1;
+        background: #fff;
+        padding: 30px;
+        border-radius: 14px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+        min-width: 0;
+      }
+      .card:first-child {
+        background: #e7eddc;
+        border-color: #cad6b5;
+      }
+      .pill {
+        font-size: 11px;
+        padding: 3px 9px;
+        border-radius: 4px;
+        display: inline-block;
+        color: #51703c;
+        background: #dae8ca;
+      }
+      .pill.soon {
+        background: #efede5;
+        color: #857755;
+      }
+      .card h3 {
+        font-size: 20px;
+      }
+      .card p {
+        color: var(--muted);
+        font-size: 14px;
+        flex: 1;
+      }
+      .card .btn {
+        font-size: 13px;
+        margin-top: 10px;
+        min-height: 44px;
+        padding-inline: 18px;
+      }
+      .card:nth-child(2) .btn {
+        background: transparent;
+        color: var(--leaf);
+        border-color: #cbd6c3;
+      }
+      #setup {
+        background: #e9eddf;
+      }
+      #setup .sec-head {
+        margin-bottom: 35px;
+      }
+      .workspace-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        font-size: 11px;
+        background: #f8f9f3;
+        padding: 13px 20px;
+        border: 1px solid #cdd8c0;
+        border-radius: 12px 12px 0 0;
+        max-width: 1000px;
+        margin: auto;
+        color: #7d8c72;
+      }
+      .workspace-bar b {
+        font-weight: 400;
+      }
+      .workspace-bar > span:first-child {
+        display: flex;
+        gap: 4px;
+        direction: ltr;
+      }
+      .workspace-bar i {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #c4cfb7;
+      }
+      .watch.wide {
+        max-width: 1000px;
+        margin: auto;
+        border: 1px solid #cdd8c0;
+        border-top: 0;
+        border-radius: 0 0 12px 12px;
+        padding: 12px;
+        background: #f8f9f3;
+        box-shadow: 0 30px 45px -30px #3b503540;
+      }
+      .watch .clip {
+        border-radius: 5px;
+      }
+      #faq .wrap {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 80px;
+      }
+      #faq .sec-head {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .faq {
+        border-top: 1px solid var(--line);
+      }
+      details {
+        border-bottom: 1px solid var(--line);
+      }
+      summary {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding-block: 21px;
+        list-style: none;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      summary::-webkit-details-marker {
+        display: none;
+      }
+      summary::after {
+        content: "+";
+        color: #809767;
+        font-size: 22px;
+        font-weight: 400;
+      }
+      details[open] summary::after {
+        content: "−";
+      }
+      details p {
+        padding-bottom: 22px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+      .final {
+        padding: 0 32px 32px;
+      }
+      .final .wrap {
+        background: #dce9bf;
+        border-radius: 18px;
+        padding: 52px 56px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        position: relative;
+        overflow: hidden;
+      }
+      .final h2 {
+        font-size: 40px;
+        line-height: 1.7;
+      }
+      .final p:not(.final-kicker) {
+        font-size: 14px;
+        color: #6c7d56;
+        margin-top: 18px;
+        max-width: 470px;
+      }
+      .final-kicker {
+        font-size: 12px;
+        color: #5d783a;
+        margin-bottom: 14px;
+      }
+      .final .btn {
+        flex: none;
+      }
+      .final::after {
+        pointer-events: none;
+      }
+      footer .wrap {
+        padding-block: 26px 36px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        font-size: 12px;
+        color: #7b8971;
+      }
+      footer nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      footer a {
+        display: inline-flex;
+        min-height: 44px;
+        align-items: center;
+      }
+      .wa-float {
+        position: fixed;
+        left: 22px;
+        bottom: 22px;
+        width: 50px;
+        height: 50px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: #205c47;
+        color: #fff;
+        z-index: 40;
+        box-shadow: 0 4px 16px #0003;
+        border: 1px solid #ffffff40;
+      }
+      .wa-float .wa-ico {
+        width: 26px;
+        height: 26px;
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        html {
+          scroll-behavior: smooth;
+        }
+      }
+      @media (max-width: 1100px) {
+        .hero .wrap {
+          gap: 40px;
+        }
+        .hero h1 {
+          font-size: 43px;
+        }
+        .orbit-label {
+          left: -22px;
+          top: 65px;
+        }
+        .hero .btn {
+          font-size: 13px;
+          padding-inline: 16px;
+        }
+        .sec-head {
+          grid-template-columns: 170px 1fr;
+        }
+        #trust .wrap,
+        #faq .wrap {
+          gap: 40px;
+        }
+        .feat {
+          padding: 25px;
+        }
+        .card {
+          padding: 24px;
+        }
+      }
+      @media (max-width: 850px) {
+        .wrap {
+          padding-inline: 26px;
+        }
+        .hero .wrap {
+          grid-template-columns: 1fr;
+          gap: 40px;
+          padding-block: 46px;
+        }
+        .hero .copy {
+          padding: 0;
+          max-width: 600px;
+        }
+        .hero h1 {
+          font-size: 48px;
+        }
+        .hero .lede {
+          max-width: 550px;
+        }
+        .hero-benefits {
+          max-width: none;
+        }
+        .video-stage {
+          max-width: 330px;
+        }
+        .orbit-label {
+          left: -22px;
+        }
+        .hero .btn {
+          font-size: 15px;
+        }
+        .sector-strip .wrap {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 14px 25px;
+        }
+        .sector-strip span {
+          flex-basis: 100%;
+          text-align: center;
+        }
+        .sec-head {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+        .kicker {
+          padding: 0;
+        }
+        .steps {
+          grid-template-columns: 1fr 1fr;
+          gap: 30px;
+        }
+        .steps li:nth-child(3) {
+          padding-inline-start: 0;
+          border: 0;
+        }
+        .features {
+          grid-template-columns: 1fr 1fr;
+        }
+        .feat:not(:nth-child(3n)) {
+          border-inline-end: 0;
+        }
+        .feat:nth-child(odd) {
+          border-inline-end: 1px solid var(--line);
+        }
+        .feat:nth-child(3) {
+          border-top: 0;
+        }
+        .status {
+          grid-template-columns: 1fr;
+        }
+        .card {
+          padding: 28px;
+        }
+        .card h3 {
+          font-size: 23px;
+        }
+        #trust .wrap,
+        #faq .wrap {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+        #trust h2 {
+          font-size: 32px;
+        }
+        section .wrap {
+          padding-block: 60px;
+        }
+        nav.links {
+          gap: 18px;
+        }
+        .final .wrap {
+          padding: 38px;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .final h2 {
+          font-size: 35px;
+        }
+      }
+      @media (max-width: 640px) {
+        header.top .wrap {
+          height: 74px;
+        }
+        .brand {
+          font-size: 24px;
+        }
+        nav.links {
+          display: none;
+        }
+        header .btn {
+          font-size: 12px;
+          padding-inline: 15px;
+          min-height: 42px;
+        }
+        .hero .wrap {
+          padding-block: 36px 40px;
+          gap: 34px;
+        }
+        .hero h1 {
+          font-size: clamp(32px, 8vw, 44px);
+          line-height: 1.75;
+          letter-spacing: -0.9px;
+          margin-top: 20px;
+        }
+        .hero .lede {
+          font-size: 16px;
+          line-height: 1.95;
+          margin-top: 18px;
+        }
+        .eyebrow {
+          font-size: 11px;
+        }
+        .ctas {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 10px;
+          margin-top: 24px;
+        }
+        .hero .btn {
+          font-size: 14px;
+          min-height: 50px;
+        }
+        .hero .note {
+          font-size: 11px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 4px 12px;
+        }
+        .hero .note span {
+          margin: 0;
+        }
+        .hero-benefits {
+          margin-top: 26px;
+          padding-top: 20px;
+          gap: 10px;
+        }
+        .hero-benefits span {
+          font-size: 11px;
+        }
+        .hero-benefits b {
+          font-size: 10px;
+        }
+        .video-stage {
+          max-width: 295px;
+        }
+        .orbit-label {
+          left: -16px;
+          font-size: 9px;
+          padding: 10px 12px;
+        }
+        .orbit-label b {
+          font-size: 10px;
+        }
+        .video-heading {
+          font-size: 10px;
+        }
+        .video-caption {
+          font-size: 12px;
+        }
+        .sector-strip .wrap {
+          gap: 12px 20px;
+          padding-block: 22px;
+        }
+        .sector-strip b {
+          font-size: 11px;
+        }
+        .sec-head h2 {
+          font-size: 28px;
+        }
+        .sec-head p:not(.kicker) {
+          font-size: 15px;
+        }
+        .kicker {
+          font-size: 12px;
+        }
+        .steps {
+          gap: 26px 18px;
+        }
+        .steps li {
+          padding: 0 16px;
+        }
+        .steps h3 {
+          font-size: 15px;
+        }
+        .steps p {
+          font-size: 13px;
+        }
+        .steps li::before {
+          margin-bottom: 12px;
+        }
+        .ledger {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+        .ledger-row {
+          padding: 25px;
+        }
+        .ledger-row b {
+          font-size: 24px;
+        }
+        .ledger-row span:nth-child(3) {
+          min-height: 0;
+        }
+        .features {
+          grid-template-columns: 1fr;
+        }
+        .feat,
+        .feat:nth-child(odd) {
+          border-inline-end: 0;
+          padding: 25px 0;
+        }
+        .feat:nth-child(2) {
+          border-top: 0;
+        }
+        .feature-icon {
+          float: right;
+          width: 35px;
+          height: 35px;
+          margin: 0 0 12px 14px;
+        }
+        .feature-icon svg {
+          width: 20px;
+          height: 20px;
+        }
+        .feat h3 {
+          min-height: 35px;
+          display: flex;
+          align-items: center;
+          font-size: 17px;
+        }
+        .feat p {
+          clear: both;
+          margin-top: 8px;
+        }
+        .trust b {
+          font-size: 15px;
+        }
+        .trust p {
+          font-size: 13px;
+        }
+        .workspace-bar {
+          font-size: 9px;
+          padding-inline: 12px;
+        }
+        .watch.wide {
+          padding: 6px;
+        }
+        .final {
+          padding: 0 16px 20px;
+        }
+        .final .wrap {
+          padding: 30px 24px;
+          border-radius: 14px;
+        }
+        .final h2 {
+          font-size: 29px;
+        }
+        .final .btn {
+          width: 100%;
+          font-size: 14px;
+        }
+        .final p:not(.final-kicker) {
+          font-size: 13px;
+        }
+        .final-kicker {
+          font-size: 10px;
+        }
+        footer .wrap {
+          flex-direction: column;
+          gap: 5px;
+          padding-bottom: 82px;
+        }
+        footer nav {
+          gap: 18px;
+        }
+        .wa-float {
+          left: 15px;
+          bottom: max(15px, env(safe-area-inset-bottom));
+          width: 46px;
+          height: 46px;
+        }
+      }
+      @media (max-width: 360px) {
+        .wrap {
+          padding-inline: 20px;
+        }
+        .hero h1 {
+          font-size: 29px;
+        }
+        .video-stage {
+          max-width: 265px;
+        }
+        .orbit-label {
+          left: -10px;
+        }
+        .hero .note {
+          font-size: 10px;
+        }
+      }
+    </style>
 
-:root{--paper:#f5f5ef;--panel:#fff;--ink:#17362e;--muted:#6b7770;--line:#dce2d9;--leaf:#205c47;--sun:#b1cc71;--chat:#102d26;--display:"Readex Pro",sans-serif;--body:"IBM Plex Sans Arabic",sans-serif;color-scheme:light}
-*{box-sizing:border-box}html{scroll-padding-top:100px}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.85 var(--body);-webkit-font-smoothing:antialiased}a{color:inherit}p,h1,h2,h3{margin:0}h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.6;letter-spacing:-.6px;text-wrap:balance}h2 em{font-style:normal;color:#7b8d7c}.wrap{width:100%;max-width:1240px;padding-inline:40px;margin-inline:auto}button,a,summary{-webkit-tap-highlight-color:transparent}:focus-visible{outline:3px solid #98b746;outline-offset:5px}a{text-decoration:none}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;border-radius:9px;padding:12px 23px;font-size:15px;font-weight:600;line-height:1.6;border:1px solid transparent;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn.solid{background:var(--leaf);color:#fff}.btn.ghost{border-color:var(--line);background:transparent}.wa-ico{width:20px;height:20px;flex:none}
-header.top{position:sticky;top:0;z-index:30;background:#f5f5eff5;backdrop-filter:blur(16px);border-bottom:1px solid #dde2d7}header.top .wrap{height:84px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{font-family:var(--display);font-size:28px;font-weight:700;display:flex;align-items:center;gap:8px;letter-spacing:-1px}.brand small{font-family:var(--body);font-size:10px;letter-spacing:1px;color:#40634f;border:1px solid #bac9b3;border-radius:4px;padding:0 5px}nav.links{display:flex;gap:30px;font-size:14px;color:#596c5e}nav.links a:hover{color:var(--leaf)}header .btn{background:transparent!important;border:1px solid #b7c5b1!important;color:var(--ink)!important;font-size:14px;min-height:44px}
-.hero{background:#102d26;color:#fff;position:relative;isolation:isolate;overflow:hidden}.hero::before{content:"";position:absolute;width:650px;height:650px;left:-240px;top:0;border:1px solid #d3ebad14;border-radius:50%;box-shadow:0 0 0 95px #d3ebad05,0 0 0 190px #d3ebad04;z-index:-1}.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,#36533d55,transparent 60%);z-index:-1}.hero .wrap{display:grid;grid-template-columns:1.18fr .82fr;gap:80px;align-items:center;padding-block:48px 56px}.hero .copy{padding-block:30px;min-width:0}.eyebrow{font-size:13px;display:flex;align-items:center;gap:10px;color:#d9e4c3}.eyebrow::before{content:"";height:6px;width:6px;border-radius:50%;background:#c2de8a;box-shadow:0 0 0 5px #b5d27712}.hero h1{font-size:clamp(38px,4.15vw,57px);margin-top:26px;line-height:1.65;letter-spacing:-1.4px}.hero h1 em{color:#c6dc9d;font-style:normal}.hero .lede{font-size:18px;line-height:2;color:#bbc9bf;max-width:470px;margin-top:23px}.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.hero .btn.solid{background:#d2e8ac;color:#19382d}.hero .btn.ghost{color:#e9ede2;border-color:#627361;background:#ffffff04}.hero .note{margin-top:15px;font-size:12px;color:#9caf9f}.hero .note span{margin-inline-start:18px}.hero-benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px;padding-top:23px;border-top:1px solid #b9ccab26;max-width:440px}.hero-benefits div{display:flex;flex-direction:column;gap:4px}.hero-benefits b{font-family:var(--display);font-size:12px;font-weight:400;letter-spacing:1px;color:#b0c994}.hero-benefits span{font-size:13px;color:#d1dccd}
-.video-stage{position:relative;width:100%;max-width:307px;justify-self:center}.video-heading{display:flex;align-items:center;gap:7px;font-size:11px;color:#bdcdbd;margin-bottom:13px}.video-duration{margin-inline-start:auto;color:#c4da9d}.live-dot{width:5px;height:5px;background:#c2db94;border-radius:50%}.clip{overflow:hidden;border-radius:18px;background:var(--chat)}.clip video{display:block;width:100%;height:auto}.clip.tall video{aspect-ratio:9/16;object-fit:contain}.clip.wide video{aspect-ratio:16/9}.hero-video{border:5px solid #e3e9d6;border-radius:26px;box-shadow:0 26px 55px #0005;position:relative}.video-caption{font-size:13px;margin-top:15px;position:relative;padding-inline-start:37px;color:#eff3e9}.video-caption>span:last-child{display:block;font-size:10px;color:#8ea991}.caption-icon{position:absolute;inset-inline-start:0;top:3px;width:27px;height:27px;border:1px solid #6c845b;border-radius:50%;display:grid;place-items:center;color:#b8d18d;font-size:18px}.orbit-label{position:absolute;left:-66px;top:60px;z-index:2;background:#f0f2e6;color:#6d7b6a;padding:12px 16px;border-radius:9px;font-size:10px;box-shadow:0 8px 30px #0002;transform:rotate(-6deg);pointer-events:none}.orbit-label b{display:block;color:#294937;font-weight:500;font-size:11px}
-.sector-strip{background:#e9ecdf;border-bottom:1px solid #d9dfce}.sector-strip .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:25px}.sector-strip span{font-size:12px;color:#72816c}.sector-strip b{font-family:var(--display);font-size:13px;font-weight:400;color:#53624c}
-section .wrap{padding-block:88px}.sec-head{display:grid;grid-template-columns:220px 1fr;gap:35px}.kicker{display:flex;align-items:center;gap:12px;font-size:13px;color:#708169;padding-top:10px}.kicker::before{content:"";width:23px;height:1px;background:#8b9b6b}.sec-head h2{font-size:clamp(27px,3.2vw,40px)}.sec-head p:not(.kicker){font-size:16px;color:var(--muted);max-width:640px;margin-top:16px}.steps{display:grid;grid-template-columns:repeat(4,1fr);list-style:none;counter-reset:step;padding:0;margin:40px 0 0;gap:0}.steps li{counter-increment:step;padding:0 24px;border-inline-start:1px solid #d6dece}.steps li:first-child{padding-inline-start:0;border:0}.steps li::before{content:"0" counter(step);font-family:var(--display);font-size:12px;color:#86936f;display:block;margin-bottom:22px}.steps h3{font-size:18px}.steps p{font-size:14px;color:var(--muted);margin-top:10px;line-height:1.9}
-#modes{background:#e9eddf}.ledger{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}.ledger-row{background:#f7f8f2;border:1px solid #d6ddcb;border-radius:14px;padding:28px;display:flex;flex-direction:column;align-items:flex-start;gap:12px;position:relative;min-width:0}.ledger-row::before{content:"↗";position:absolute;left:23px;top:23px;width:33px;height:33px;border:1px solid #ced8bf;border-radius:50%;display:grid;place-items:center;color:#748b58}.ledger-row b{font-family:var(--display);font-size:26px;font-weight:500;margin-bottom:8px}.ledger-row span{font-size:14px;color:#697562}.ledger-row span:nth-child(3){border-top:1px solid #dde4d3;padding-top:15px;margin-top:5px;width:100%;min-height:68px}.ledger-row .unit{font-size:11px;color:#42623a;background:#e9efdf;padding:3px 9px;border-radius:4px}
-#features{background:#fafbf7}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:35px}.feat{padding:30px;border-bottom:1px solid var(--line);min-width:0}.feat:nth-child(-n+3){border-top:1px solid var(--line)}.feat:not(:nth-child(3n)){border-inline-end:1px solid var(--line)}.feature-icon{display:grid;place-items:center;width:40px;height:40px;background:#edf0e4;border-radius:10px;color:#56733e;margin-bottom:20px}.feature-icon svg{width:23px;height:23px}.feat h3{font-size:17px}.feat p{font-size:14px;color:var(--muted);line-height:1.95;margin-top:12px}
-#trust{background:#15362b;color:#edf2e3}#trust .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px}#trust .sec-head{display:flex;flex-direction:column;gap:22px}#trust .kicker{color:#a6be8b}#trust h2{font-size:34px;line-height:1.8}.trust{display:grid;gap:20px}.trust div{display:flex;gap:17px;padding-bottom:20px;border-bottom:1px solid #d6e4bf26}.trust div:last-child{border:0;padding:0}.trust div::before{content:"✓";display:grid;place-items:center;flex:none;width:25px;height:25px;border-radius:50%;background:#d1e6a918;color:#bad496;font-size:13px;margin-top:5px}.trust p{font-size:13px;color:#a8bfac;line-height:1.9}.trust b{display:block;color:#e5eddc;font-size:16px;font-weight:500;margin-bottom:4px}
-.status{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}.card{border:1px solid #dce2d1;background:#fff;padding:30px;border-radius:14px;display:flex;align-items:flex-start;flex-direction:column;gap:16px;min-width:0}.card:first-child{background:#e7eddc;border-color:#cad6b5}.pill{font-size:11px;padding:3px 9px;border-radius:4px;display:inline-block;color:#51703c;background:#dae8ca}.pill.soon{background:#efede5;color:#857755}.card h3{font-size:20px}.card p{color:var(--muted);font-size:14px;flex:1}.card .btn{font-size:13px;margin-top:10px;min-height:44px;padding-inline:18px}.card:nth-child(2) .btn{background:transparent;color:var(--leaf);border-color:#cbd6c3}
-#setup{background:#e9eddf}#setup .sec-head{margin-bottom:35px}.workspace-bar{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:11px;background:#f8f9f3;padding:13px 20px;border:1px solid #cdd8c0;border-radius:12px 12px 0 0;max-width:1000px;margin:auto;color:#7d8c72}.workspace-bar b{font-weight:400}.workspace-bar>span:first-child{display:flex;gap:4px;direction:ltr}.workspace-bar i{width:6px;height:6px;border-radius:50%;background:#c4cfb7}.watch.wide{max-width:1000px;margin:auto;border:1px solid #cdd8c0;border-top:0;border-radius:0 0 12px 12px;padding:12px;background:#f8f9f3;box-shadow:0 30px 45px -30px #3b503540}.watch .clip{border-radius:5px}
-#faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px}#faq .sec-head{display:flex;flex-direction:column;gap:15px}.faq{border-top:1px solid var(--line)}details{border-bottom:1px solid var(--line)}summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:18px;padding-block:21px;list-style:none;font-size:16px;font-weight:500}summary::-webkit-details-marker{display:none}summary::after{content:"+";color:#809767;font-size:22px;font-weight:400}details[open] summary::after{content:"−"}details p{padding-bottom:22px;font-size:14px;color:var(--muted)}
-.final{padding:0 32px 32px}.final .wrap{background:#dce9bf;border-radius:18px;padding:52px 56px;display:flex;align-items:center;justify-content:space-between;gap:30px;position:relative;overflow:hidden}.final h2{font-size:40px;line-height:1.7}.final p:not(.final-kicker){font-size:14px;color:#6c7d56;margin-top:18px;max-width:470px}.final-kicker{font-size:12px;color:#5d783a;margin-bottom:14px}.final .btn{flex:none}.final::after{pointer-events:none}footer .wrap{padding-block:26px 36px;display:flex;justify-content:space-between;gap:20px;font-size:12px;color:#7b8971}footer nav{display:flex;flex-wrap:wrap;gap:20px}footer a{display:inline-flex;min-height:44px;align-items:center}.wa-float{position:fixed;left:22px;bottom:22px;width:50px;height:50px;display:grid;place-items:center;border-radius:50%;background:#205c47;color:#fff;z-index:40;box-shadow:0 4px 16px #0003;border:1px solid #ffffff40}.wa-float .wa-ico{width:26px;height:26px}
-@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
-@media(max-width:1100px){.hero .wrap{gap:40px}.hero h1{font-size:43px}.orbit-label{left:-22px;top:65px}.hero .btn{font-size:13px;padding-inline:16px}.sec-head{grid-template-columns:170px 1fr}#trust .wrap,#faq .wrap{gap:40px}.feat{padding:25px}.card{padding:24px}}
-@media(max-width:850px){.wrap{padding-inline:26px}.hero .wrap{grid-template-columns:1fr;gap:40px;padding-block:46px}.hero .copy{padding:0;max-width:600px}.hero h1{font-size:48px}.hero .lede{max-width:550px}.hero-benefits{max-width:none}.video-stage{max-width:330px}.orbit-label{left:-22px}.hero .btn{font-size:15px}.sector-strip .wrap{flex-wrap:wrap;justify-content:center;gap:14px 25px}.sector-strip span{flex-basis:100%;text-align:center}.sec-head{grid-template-columns:1fr;gap:16px}.kicker{padding:0}.steps{grid-template-columns:1fr 1fr;gap:30px}.steps li:nth-child(3){padding-inline-start:0;border:0}.features{grid-template-columns:1fr 1fr}.feat:not(:nth-child(3n)){border-inline-end:0}.feat:nth-child(odd){border-inline-end:1px solid var(--line)}.feat:nth-child(3){border-top:0}.status{grid-template-columns:1fr}.card{padding:28px}.card h3{font-size:23px}#trust .wrap,#faq .wrap{grid-template-columns:1fr;gap:32px}#trust h2{font-size:32px}section .wrap{padding-block:60px}nav.links{gap:18px}.final .wrap{padding:38px;flex-direction:column;align-items:flex-start}.final h2{font-size:35px}}
-@media(max-width:640px){header.top .wrap{height:74px}.brand{font-size:24px}nav.links{display:none}header .btn{font-size:12px;padding-inline:15px;min-height:42px}.hero .wrap{padding-block:36px 40px;gap:34px}.hero h1{font-size:clamp(32px,8vw,44px);line-height:1.75;letter-spacing:-.9px;margin-top:20px}.hero .lede{font-size:16px;line-height:1.95;margin-top:18px}.eyebrow{font-size:11px}.ctas{display:grid;grid-template-columns:1fr;gap:10px;margin-top:24px}.hero .btn{font-size:14px;min-height:50px}.hero .note{font-size:11px;display:flex;flex-wrap:wrap;gap:4px 12px}.hero .note span{margin:0}.hero-benefits{margin-top:26px;padding-top:20px;gap:10px}.hero-benefits span{font-size:11px}.hero-benefits b{font-size:10px}.video-stage{max-width:295px}.orbit-label{left:-16px;font-size:9px;padding:10px 12px}.orbit-label b{font-size:10px}.video-heading{font-size:10px}.video-caption{font-size:12px}.sector-strip .wrap{gap:12px 20px;padding-block:22px}.sector-strip b{font-size:11px}.sec-head h2{font-size:28px}.sec-head p:not(.kicker){font-size:15px}.kicker{font-size:12px}.steps{gap:26px 18px}.steps li{padding:0 16px}.steps h3{font-size:15px}.steps p{font-size:13px}.steps li::before{margin-bottom:12px}.ledger{grid-template-columns:1fr;gap:12px}.ledger-row{padding:25px}.ledger-row b{font-size:24px}.ledger-row span:nth-child(3){min-height:0}.features{grid-template-columns:1fr}.feat,.feat:nth-child(odd){border-inline-end:0;padding:25px 0}.feat:nth-child(2){border-top:0}.feature-icon{float:right;width:35px;height:35px;margin:0 0 12px 14px}.feature-icon svg{width:20px;height:20px}.feat h3{min-height:35px;display:flex;align-items:center;font-size:17px}.feat p{clear:both;margin-top:8px}.trust b{font-size:15px}.trust p{font-size:13px}.workspace-bar{font-size:9px;padding-inline:12px}.watch.wide{padding:6px}.final{padding:0 16px 20px}.final .wrap{padding:30px 24px;border-radius:14px}.final h2{font-size:29px}.final .btn{width:100%;font-size:14px}.final p:not(.final-kicker){font-size:13px}.final-kicker{font-size:10px}footer .wrap{flex-direction:column;gap:5px;padding-bottom:82px}footer nav{gap:18px}.wa-float{left:15px;bottom:max(15px,env(safe-area-inset-bottom));width:46px;height:46px}}
-@media(max-width:360px){.wrap{padding-inline:20px}.hero h1{font-size:29px}.video-stage{max-width:265px}.orbit-label{left:-10px}.hero .note{font-size:10px}}
+    <link rel="stylesheet" href="fonts/tajawal.css" />
+    <link rel="stylesheet" href="saudi.css?v=2" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap">
+        <a class="brand" href="#top"
+          ><img
+            class="project-icon"
+            src="app-icon.png"
+            width="40"
+            height="40"
+            alt=""
+          />حجوزاتي <small>PRO</small></a
+        >
+        <nav class="links" aria-label="أقسام الصفحة">
+          <a href="#conversation">شاهد المحادثة</a>
+          <a href="#how">كيف يعمل</a>
+          <a href="#features">المزايا</a>
+          <a href="#faq">أسئلة</a>
+        </nav>
+        <a
+          class="btn solid"
+          href="https://hajozati.onrender.com/start.html"
+          target="_blank"
+          rel="noopener"
+          >ابدأ مجاناً</a
+        >
+      </div>
+    </header>
 
-</style>
+    <main id="top">
+      <div class="hero">
+        <div class="wrap">
+          <div class="copy">
+            <p class="eyebrow">من طموحك، تبدأ الحكاية</p>
+            <h1>شغلك يكبر.<br /><em>وحجوزاتك تواكبه.</em></h1>
+            <p class="lede">
+              نظام حجوزات يفهم طبيعة شغلك. تجهّزه بمحادثة، تديره من مكان واحد،
+              وتشارك رابط الحجز مع عملائك. ببساطة، هذا هو حجوزاتي.
+            </p>
+            <div class="ctas">
+              <a
+                class="btn solid"
+                href="https://wa.me/19896608479?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AA%D8%AC%D9%87%D9%8A%D8%B2%20%D9%86%D8%B4%D8%A7%D8%B7%D9%8A"
+                target="_blank"
+                rel="noopener"
+                ><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8C29 8.7 23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.9-3.9-1.9-6 0-5.9 4.9-10.6 11-10.6s11 4.8 11 10.6-4.9 10.9-10.9 10.9zm6-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.8 1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 2.2.9 3 1 4.1.8.7-.1 1.9-.8 2.2-1.5s.3-1.3.2-1.5c-.1-.1-.3-.2-.6-.4z"
+                  /></svg
+                >ابدأ على واتساب ←</a
+              >
+              <a
+                class="btn ghost"
+                href="https://hajozati.onrender.com/start.html"
+                target="_blank"
+                rel="noopener"
+                >ابدأ من المتصفح</a
+              >
+            </div>
+            <p class="note">
+              ✓ تجربة مجانية خلال الإطلاق <span>✓ دون بطاقة دفع</span>
+            </p>
+            <div class="hero-benefits">
+              <div><b>01</b><span>عرّفنا بنشاطك</span></div>
+              <div><b>02</b><span>راجع إعداداتك</span></div>
+              <div><b>03</b><span>شارك رابطك</span></div>
+            </div>
+          </div>
 
-<link rel="stylesheet" href="fonts/tajawal.css">
-<link rel="stylesheet" href="saudi.css?v=1">
-</head>
-<body>
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="#top">حجوزاتي <small>PRO</small></a>
-    <nav class="links" aria-label="أقسام الصفحة">
-      <a href="#conversation">شاهد المحادثة</a>
-      <a href="#how">كيف يعمل</a>
-      <a href="#features">المزايا</a>
-      <a href="#faq">أسئلة</a>
-    </nav>
-    <a class="btn solid" href="https://hajozati.onrender.com/start.html" target="_blank" rel="noopener">ابدأ مجاناً</a>
-  </div>
-</header>
-
-<main id="top">
-  <div class="hero">
-    <div class="wrap">
-      <div class="copy">
-        <p class="eyebrow">من طموحك، تبدأ الحكاية</p>
-        <h1>شغلك يكبر.<br><em>وحجوزاتك تواكبه.</em></h1>
-        <p class="lede">نظام حجوزات يفهم طبيعة شغلك. تجهّزه بمحادثة، تديره من مكان واحد، وتشارك رابط الحجز مع عملائك. ببساطة، هذا هو حجوزاتي.</p>
-        <div class="ctas">
-          <a class="btn solid" href="https://wa.me/19896608479?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AA%D8%AC%D9%87%D9%8A%D8%B2%20%D9%86%D8%B4%D8%A7%D8%B7%D9%8A" target="_blank" rel="noopener"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8C29 8.7 23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.9-3.9-1.9-6 0-5.9 4.9-10.6 11-10.6s11 4.8 11 10.6-4.9 10.9-10.9 10.9zm6-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.8 1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 2.2.9 3 1 4.1.8.7-.1 1.9-.8 2.2-1.5s.3-1.3.2-1.5c-.1-.1-.3-.2-.6-.4z"/></svg>ابدأ على واتساب ←</a>
-          <a class="btn ghost" href="https://hajozati.onrender.com/start.html" target="_blank" rel="noopener">ابدأ من المتصفح</a>
+          <div class="video-stage">
+            <img
+              class="heritage-backdrop"
+              src="design/najdi-gate.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <div class="orbit-label" aria-hidden="true">
+              لك طموحك.<br /><b>ولحجوزاتك، حجوزاتي.</b>
+            </div>
+            <div class="video-heading">
+              <span class="live-dot"></span> تجهيز نشاطك، خطوة بخطوة
+              <span class="video-duration">شاهد التجربة ↙</span>
+            </div>
+            <div class="clip tall hero-video" id="conversation">
+              <video
+                data-lazy-video
+                muted
+                playsinline
+                loop
+                controls
+                preload="metadata"
+                poster="media/whatsapp-demo-cars.jpg"
+                aria-label="فيديو محادثة تجهيز معرض تأجير سيارات في الرياض على واتساب"
+                width="720"
+                height="1280"
+              >
+                <source
+                  data-src="media/whatsapp-demo-cars.mp4"
+                  type="video/mp4"
+                />
+                يمكنك
+                <a href="media/whatsapp-demo-cars.mp4">تحميل فيديو المحادثة</a>.
+              </video>
+            </div>
+            <p class="video-caption">
+              <span class="caption-icon">↗</span> محادثة واحدة. بداية
+              جديدة.<span>مثال توضيحي لتجهيز معرض تأجير سيارات</span>
+            </p>
+          </div>
         </div>
-        <p class="note">✓ تجربة مجانية خلال الإطلاق <span>✓ دون بطاقة دفع</span></p>
-        <div class="hero-benefits"><div><b>01</b><span>عرّفنا بنشاطك</span></div><div><b>02</b><span>راجع إعداداتك</span></div><div><b>03</b><span>شارك رابطك</span></div></div>
       </div>
-
-      <div class="video-stage"><img class="heritage-backdrop" src="design/najdi-gate.svg" alt="" aria-hidden="true"><div class="orbit-label" aria-hidden="true">لك طموحك.<br><b>ولحجوزاتك، حجوزاتي.</b></div>
-        <div class="video-heading"><span class="live-dot"></span> تجهيز نشاطك، خطوة بخطوة <span class="video-duration">شاهد التجربة ↙</span></div>
-      <div class="clip tall hero-video" id="conversation">
-        <video data-lazy-video muted playsinline loop controls preload="metadata" poster="media/whatsapp-demo-cars.jpg" aria-label="فيديو محادثة تجهيز معرض تأجير سيارات في الرياض على واتساب" width="720" height="1280">
-          <source data-src="media/whatsapp-demo-cars.mp4" type="video/mp4">
-          يمكنك <a href="media/whatsapp-demo-cars.mp4">تحميل فيديو المحادثة</a>.
-        </video>
-      </div>
-        <p class="video-caption"><span class="caption-icon">↗</span> محادثة واحدة. بداية جديدة.<span>مثال توضيحي لتجهيز معرض تأجير سيارات</span></p>
-      </div>
-    </div>
-  </div>
-  <div class="sector-strip"><div class="wrap"><span>لكل نشاط، طريقته.</span><b>صالونات وعناية</b><b>عيادات</b><b>تأجير سيارات</b><b>قاعات وملاعب</b><b>شقق وفنادق</b></div></div>
-  <section id="how">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="kicker">كيف يعمل</p>
-        <div>
-          <h2>بداية سهلة.<br><em>وشغل مرتّب من بعدها.</em></h2>
-          <p>لا نماذج طويلة ولا إعدادات معقدة. المحادثة تجمع التفاصيل، والملخص يحمي قرارك.</p>
+      <div class="sector-strip">
+        <div class="wrap">
+          <span>لكل نشاط، طريقته.</span><b>صالونات وعناية</b><b>عيادات</b
+          ><b>تأجير سيارات</b><b>قاعات وملاعب</b><b>شقق وفنادق</b>
         </div>
       </div>
-      <ol class="steps">
-        <li><h3>تحكي عن نشاطك</h3><p>بالعربية وبأسلوبك. المساعد يسأل سؤالاً أو سؤالين في كل مرة عمّا ينقص فقط.</p></li>
-        <li><h3>تراجع الملخص</h3><p>الخدمات والأسعار والمدد والسعة وساعات العمل وأيام الإغلاق في رسالة واحدة. عدّل ما تريد قبل الموافقة.</p></li>
-        <li><h3>توافق صراحة</h3><p>لا يُنشأ شيء إلا بعد أن ترسل «أوافق وأؤكد». أي تعديل بعد الملخص يلغيه ويعرض ملخصاً جديداً.</p></li>
-        <li><h3>تستلم مساحتك</h3><p>رابط دخول خاص لمرة واحدة، لوحة لإدارة الحجوزات، ورابط حجز جاهز للمشاركة.</p></li>
-      </ol>
-    </div>
-  </section>
-
-  <section id="modes">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="kicker">أنواع الحجز</p>
-        <div>
-          <h2>مهما كان نشاطك، له حجز يناسبه.</h2>
-          <p>بالموعد، بالساعة، أو باليوم. اختر الطريقة المناسبة لخدماتك، وحدّد السعر والسعة بكل وضوح.</p>
+      <section id="how">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="kicker">كيف يعمل</p>
+            <div>
+              <h2>بداية سهلة.<br /><em>وشغل مرتّب من بعدها.</em></h2>
+              <p>
+                لا نماذج طويلة ولا إعدادات معقدة. المحادثة تجمع التفاصيل،
+                والملخص يحمي قرارك.
+              </p>
+            </div>
+          </div>
+          <ol class="steps">
+            <li>
+              <h3>تحكي عن نشاطك</h3>
+              <p>
+                بالعربية وبأسلوبك. المساعد يسأل سؤالاً أو سؤالين في كل مرة عمّا
+                ينقص فقط.
+              </p>
+            </li>
+            <li>
+              <h3>تراجع الملخص</h3>
+              <p>
+                الخدمات والأسعار والمدد والسعة وساعات العمل وأيام الإغلاق في
+                رسالة واحدة. عدّل ما تريد قبل الموافقة.
+              </p>
+            </li>
+            <li>
+              <h3>توافق صراحة</h3>
+              <p>
+                لا يُنشأ شيء إلا بعد أن ترسل «أوافق وأؤكد». أي تعديل بعد الملخص
+                يلغيه ويعرض ملخصاً جديداً.
+              </p>
+            </li>
+            <li>
+              <h3>تستلم مساحتك</h3>
+              <p>
+                رابط دخول خاص لمرة واحدة، لوحة لإدارة الحجوزات، ورابط حجز جاهز
+                للمشاركة.
+              </p>
+            </li>
+          </ol>
         </div>
-      </div>
-      <div class="ledger" role="list" aria-label="أنواع الحجز">
+      </section>
 
-        <div class="ledger-row" role="listitem"><b>موعد</b><span>صالونات، عيادات، استشارات، تدريب</span><span>اليوم والوقت، والمدة ثابتة حسب الخدمة</span><span class="unit">مدة ووقت محددان</span></div>
-        <div class="ledger-row" role="listitem"><b>بالساعة</b><span>قاعات، ملاعب، استوديوهات، معدات</span><span>وقت البدء وعدد الساعات بمضاعفات فاصل الخدمة</span><span class="unit">حجز مرن بالساعات</span></div>
-        <div class="ledger-row" role="listitem"><b>باليوم</b><span>تأجير سيارات، شقق مفروشة، فنادق</span><span>تاريخ الاستلام وعدد الأيام أو الليالي</span><span class="unit">أيام وليالٍ</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="features">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="kicker">المزايا</p>
-        <div>
-          <h2>خلف كل حجز مرتّب،<br><em>تفاصيل محسوبة.</em></h2>
-          <p>من الأوقات المتاحة إلى السعر النهائي، حجوزاتي يساعدك تدير تفاصيل يومك بوضوح.</p>
+      <section id="modes">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="kicker">أنواع الحجز</p>
+            <div>
+              <h2>مهما كان نشاطك، له حجز يناسبه.</h2>
+              <p>
+                بالموعد، بالساعة، أو باليوم. اختر الطريقة المناسبة لخدماتك،
+                وحدّد السعر والسعة بكل وضوح.
+              </p>
+            </div>
+          </div>
+          <div class="ledger" role="list" aria-label="أنواع الحجز">
+            <div class="ledger-row" role="listitem">
+              <b>موعد</b><span>صالونات، عيادات، استشارات، تدريب</span
+              ><span>اليوم والوقت، والمدة ثابتة حسب الخدمة</span
+              ><span class="unit">مدة ووقت محددان</span>
+            </div>
+            <div class="ledger-row" role="listitem">
+              <b>بالساعة</b><span>قاعات، ملاعب، استوديوهات، معدات</span
+              ><span>وقت البدء وعدد الساعات بمضاعفات فاصل الخدمة</span
+              ><span class="unit">حجز مرن بالساعات</span>
+            </div>
+            <div class="ledger-row" role="listitem">
+              <b>باليوم</b><span>تأجير سيارات، شقق مفروشة، فنادق</span
+              ><span>تاريخ الاستلام وعدد الأيام أو الليالي</span
+              ><span class="unit">أيام وليالٍ</span>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="features">
-        <div class="feat"><span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M7 4v6m10-6v6M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/><path d="m9 15 2 2 4-4"/></svg></span><h3>المكان الصحيح. العدد الصحيح.</h3><p>غرفة واحدة لخدمتين، أو قاعة بعشرين مقعداً. السعة تُحسب على المورد المشترك وعلى الخدمة معاً.</p></div>
-        <div class="feat"><span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></span><h3>ورديات تمتد لليوم التالي</h3><p>من 8 مساءً إلى 2 فجراً تبقى وردية واحدة، مع حساب صحيح عند تغيير التوقيت الصيفي.</p></div>
-        <div class="feat"><span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m4 8 8-4 8 4v8l-8 4-8-4Z M4 8l8 4 8-4M12 12v8"/></svg></span><h3>السعر قبل التأكيد</h3><p>الزبون يرى المبلغ قبل أن يؤكد، والنظام يعيد التحقق من السعر والسعة لحظة الحفظ.</p></div>
-        <div class="feat"><span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M4 12h16M12 4c-5 5-5 11 0 16 5-5 5-11 0-16Z"/></svg></span><h3>أي عملة وأي منطقة زمنية</h3><p>ريال، درهم، دينار، جنيه، دولار. الأوقات تُحفظ بتوقيت نشاطك وتُعرض كما يعرفها زبونك.</p></div>
-        <div class="feat"><span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13v-2a7 7 0 0 1 14 0v5a3 3 0 0 1-3 3h-4M5 11H3v5h3v-5Zm14 0h2v5h-3v-5Z"/></svg></span><h3>تحويل لموظف عند الحاجة</h3><p>الحالات الاستثنائية تُحوَّل لفريقك، ويتوقف الرد الآلي في تلك المحادثة حتى تعيده.</p></div>
-        <div class="feat"><span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m10 14 4-4m-6 7-1 1a4 4 0 0 1-5-5l4-4a4 4 0 0 1 6 0m0 6a4 4 0 0 0 6 0l4-4a4 4 0 0 0-5-5l-1 1"/></svg></span><h3>ربط نظامك الحالي</h3><p>إن كان لديك موقع أو نظام حجوزات، نراجع ربطه ومزامنة الحجز والإلغاء في الاتجاهين.</p></div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section id="trust">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="kicker">الأمان</p>
-        <div>
-          <h2>بيانات كل نشاط منفصلة. وقرارك محمي.</h2>
+      <section id="features">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="kicker">المزايا</p>
+            <div>
+              <h2>خلف كل حجز مرتّب،<br /><em>تفاصيل محسوبة.</em></h2>
+              <p>
+                من الأوقات المتاحة إلى السعر النهائي، حجوزاتي يساعدك تدير تفاصيل
+                يومك بوضوح.
+              </p>
+            </div>
+          </div>
+          <div class="features">
+            <div class="feat">
+              <span class="feature-icon" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4 7h16M7 4v6m10-6v6M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"
+                  />
+                  <path d="m9 15 2 2 4-4" /></svg
+              ></span>
+              <h3>المكان الصحيح. العدد الصحيح.</h3>
+              <p>
+                غرفة واحدة لخدمتين، أو قاعة بعشرين مقعداً. السعة تُحسب على
+                المورد المشترك وعلى الخدمة معاً.
+              </p>
+            </div>
+            <div class="feat">
+              <span class="feature-icon" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="8" />
+                  <path d="M12 7v5l3 2" /></svg
+              ></span>
+              <h3>ورديات تمتد لليوم التالي</h3>
+              <p>
+                من 8 مساءً إلى 2 فجراً تبقى وردية واحدة، مع حساب صحيح عند تغيير
+                التوقيت الصيفي.
+              </p>
+            </div>
+            <div class="feat">
+              <span class="feature-icon" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="m4 8 8-4 8 4v8l-8 4-8-4Z M4 8l8 4 8-4M12 12v8"
+                  /></svg
+              ></span>
+              <h3>السعر قبل التأكيد</h3>
+              <p>
+                الزبون يرى المبلغ قبل أن يؤكد، والنظام يعيد التحقق من السعر
+                والسعة لحظة الحفظ.
+              </p>
+            </div>
+            <div class="feat">
+              <span class="feature-icon" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="8" />
+                  <path d="M4 12h16M12 4c-5 5-5 11 0 16 5-5 5-11 0-16Z" /></svg
+              ></span>
+              <h3>أي عملة وأي منطقة زمنية</h3>
+              <p>
+                ريال، درهم، دينار، جنيه، دولار. الأوقات تُحفظ بتوقيت نشاطك
+                وتُعرض كما يعرفها زبونك.
+              </p>
+            </div>
+            <div class="feat">
+              <span class="feature-icon" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M5 13v-2a7 7 0 0 1 14 0v5a3 3 0 0 1-3 3h-4M5 11H3v5h3v-5Zm14 0h2v5h-3v-5Z"
+                  /></svg
+              ></span>
+              <h3>تحويل لموظف عند الحاجة</h3>
+              <p>
+                الحالات الاستثنائية تُحوَّل لفريقك، ويتوقف الرد الآلي في تلك
+                المحادثة حتى تعيده.
+              </p>
+            </div>
+            <div class="feat">
+              <span class="feature-icon" aria-hidden="true"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="m10 14 4-4m-6 7-1 1a4 4 0 0 1-5-5l4-4a4 4 0 0 1 6 0m0 6a4 4 0 0 0 6 0l4-4a4 4 0 0 0-5-5l-1 1"
+                  /></svg
+              ></span>
+              <h3>ربط نظامك الحالي</h3>
+              <p>
+                إن كان لديك موقع أو نظام حجوزات، نراجع ربطه ومزامنة الحجز
+                والإلغاء في الاتجاهين.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="trust">
-        <div><p><b>لا شيء بدون موافقتك</b>المساعد يكتب مسودة فقط. الإنشاء يحتاج نص الموافقة كما هو، وانتهاء مهلة الملخص يعيد عرضه.</p></div>
-        <div><p><b>رابط دخول لمرة واحدة</b>صالح لساعة، ويُستبدل مفتاحك القديم وجلساته ومفاتيح التكامل عند استلامه.</p></div>
-        <div><p><b>عزل كامل بين المنشآت</b>كل نشاط يرى حجوزاته وزبائنه فقط، ورقم المنصة لا يمكن ربطه بأي منشأة.</p></div>
-        <div><p><b>لا كلمات مرور في المحادثة</b>لا نطلب أسراراً على واتساب، ولا نحفظ رابط الدخول في سجل الرسائل.</p></div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section id="try">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="kicker">جرّب الآن</p>
-        <div>
-          <h2>ابدأ بالطريقة اللي تناسبك.</h2>
-          <p>نحن في إطلاق تجريبي. هذا ما يعمل الآن، وما يُفعَّل بعده.</p>
+      <section id="trust">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="kicker">الأمان</p>
+            <div>
+              <h2>بيانات كل نشاط منفصلة. وقرارك محمي.</h2>
+            </div>
+          </div>
+          <div class="trust">
+            <div>
+              <p>
+                <b>لا شيء بدون موافقتك</b>المساعد يكتب مسودة فقط. الإنشاء يحتاج
+                نص الموافقة كما هو، وانتهاء مهلة الملخص يعيد عرضه.
+              </p>
+            </div>
+            <div>
+              <p>
+                <b>رابط دخول لمرة واحدة</b>صالح لساعة، ويُستبدل مفتاحك القديم
+                وجلساته ومفاتيح التكامل عند استلامه.
+              </p>
+            </div>
+            <div>
+              <p>
+                <b>عزل كامل بين المنشآت</b>كل نشاط يرى حجوزاته وزبائنه فقط، ورقم
+                المنصة لا يمكن ربطه بأي منشأة.
+              </p>
+            </div>
+            <div>
+              <p>
+                <b>لا كلمات مرور في المحادثة</b>لا نطلب أسراراً على واتساب، ولا
+                نحفظ رابط الدخول في سجل الرسائل.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="status">
-        <div class="card">
-          <span class="pill on">متاح الآن</span>
-          <h3>مساحة النشاط ورابط الحجز</h3>
-          <p>أنشئ مساحتك من المتصفح في دقائق: خدمة، سعر، ساعات عمل. تحصل على لوحة إدارة ورابط حجز تشاركه مع زبائنك.</p>
-          <a class="btn solid" href="https://hajozati.onrender.com/start.html" target="_blank" rel="noopener">أنشئ مساحتك ←</a>
+      </section>
+
+      <section id="try">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="kicker">جرّب الآن</p>
+            <div>
+              <h2>ابدأ بالطريقة اللي تناسبك.</h2>
+              <p>نحن في إطلاق تجريبي. هذا ما يعمل الآن، وما يُفعَّل بعده.</p>
+            </div>
+          </div>
+          <div class="status">
+            <div class="card">
+              <span class="pill on">متاح الآن</span>
+              <h3>مساحة النشاط ورابط الحجز</h3>
+              <p>
+                أنشئ مساحتك من المتصفح في دقائق: خدمة، سعر، ساعات عمل. تحصل على
+                لوحة إدارة ورابط حجز تشاركه مع زبائنك.
+              </p>
+              <a
+                class="btn solid"
+                href="https://hajozati.onrender.com/start.html"
+                target="_blank"
+                rel="noopener"
+                >أنشئ مساحتك ←</a
+              >
+            </div>
+            <div class="card">
+              <span class="pill on">متاح الآن</span>
+              <h3>التجهيز عبر واتساب</h3>
+              <p>
+                راسل رقم حجوزاتي ‎+1 989 660 8479 وصف نشاطك، والمساعد يجهّز
+                مساحتك ورابط الحجز.
+              </p>
+              <a
+                class="btn solid"
+                href="https://wa.me/19896608479?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AA%D8%AC%D9%87%D9%8A%D8%B2%20%D9%86%D8%B4%D8%A7%D8%B7%D9%8A"
+                target="_blank"
+                rel="noopener"
+                ><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8C29 8.7 23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.9-3.9-1.9-6 0-5.9 4.9-10.6 11-10.6s11 4.8 11 10.6-4.9 10.9-10.9 10.9zm6-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.8 1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 2.2.9 3 1 4.1.8.7-.1 1.9-.8 2.2-1.5s.3-1.3.2-1.5c-.1-.1-.3-.2-.6-.4z"
+                  /></svg
+                >راسلنا على واتساب ←</a
+              >
+            </div>
+            <div class="card">
+              <span class="pill soon">بعد التفعيل الرسمي</span>
+              <h3>بوت الحجز على رقم نشاطك</h3>
+              <p>
+                زبائنك يحجزون على رقم واتساب نشاطك نفسه، بعد إثبات ملكية الرقم
+                واعتماد Meta.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <span class="pill on">متاح الآن</span>
-          <h3>التجهيز عبر واتساب</h3>
-          <p>راسل رقم حجوزاتي ‎+1 989 660 8479 وصف نشاطك، والمساعد يجهّز مساحتك ورابط الحجز.</p>
-          <a class="btn solid" href="https://wa.me/19896608479?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AA%D8%AC%D9%87%D9%8A%D8%B2%20%D9%86%D8%B4%D8%A7%D8%B7%D9%8A" target="_blank" rel="noopener"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8C29 8.7 23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.9-3.9-1.9-6 0-5.9 4.9-10.6 11-10.6s11 4.8 11 10.6-4.9 10.9-10.9 10.9zm6-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.8 1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 2.2.9 3 1 4.1.8.7-.1 1.9-.8 2.2-1.5s.3-1.3.2-1.5c-.1-.1-.3-.2-.6-.4z"/></svg>راسلنا على واتساب ←</a>
+      </section>
+
+      <section id="setup">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="kicker">ضبط الإعدادات</p>
+            <div>
+              <h2>نشاطك كاملًا.<br /><em>والصورة أوضح.</em></h2>
+              <p>
+                خدماتك، أسعارك، أوقات عملك وطلبات عملائك في لوحة واحدة. شاهد
+                جولة فعلية في إعداد نشاط لتأجير السيارات، من ضبط الخدمات حتى
+                إدارة الحجوزات.
+              </p>
+            </div>
+          </div>
+          <div class="workspace-bar">
+            <span><i></i><i></i><i></i></span><b>مساحة عملك · حجوزاتي</b
+            ><span>عرض توضيحي</span>
+          </div>
+          <div class="watch wide">
+            <div class="clip wide">
+              <video
+                data-lazy-video
+                muted
+                playsinline
+                loop
+                controls
+                preload="none"
+                poster="media/settings-guide-cars.jpg"
+                aria-label="فيديو يشرح ضبط إعدادات معرض تأجير سيارات في لوحة تحكم حجوزاتي"
+                width="1280"
+                height="720"
+              >
+                <source
+                  data-src="media/settings-guide-cars.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <span class="pill soon">بعد التفعيل الرسمي</span>
-          <h3>بوت الحجز على رقم نشاطك</h3>
-          <p>زبائنك يحجزون على رقم واتساب نشاطك نفسه، بعد إثبات ملكية الرقم واعتماد Meta.</p>
+      </section>
+
+      <section id="faq">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="kicker">أسئلة</p>
+            <div><h2>أسئلتك، وإجاباتها.</h2></div>
+          </div>
+          <div class="faq">
+            <details>
+              <summary>هل يناسب نشاطي؟</summary>
+              <p>
+                إذا كان زبائنك يحجزون وقتاً أو مكاناً أو شيئاً، فغالباً نعم:
+                صالونات، عيادات، قاعات، ملاعب، تأجير سيارات، شقق، تدريب،
+                واستشارات. أنواع الحجز الثلاثة تغطي أغلب الحالات.
+              </p>
+            </details>
+            <details>
+              <summary>هل أحتاج رقم واتساب جديداً؟</summary>
+              <p>
+                لا تحتاجه للبدء. رابط الحجز يعمل الآن وتشاركه من رقمك الحالي.
+                وعند تفعيل البوت على رقم نشاطك نستخدم رقماً تملكه أنت بعد إثبات
+                ملكيته.
+              </p>
+            </details>
+            <details>
+              <summary>ماذا لو أخطأت في معلومة بعد الملخص؟</summary>
+              <p>
+                اكتب التعديل فقط. أي رسالة غير الموافقة تلغي الملخص السابق،
+                ويعرض المساعد ملخصاً جديداً. ولا يُنشأ نشاطك بالبيانات القديمة
+                أبداً.
+              </p>
+            </details>
+            <details>
+              <summary>هل يمكن ربطه بنظامي الحالي؟</summary>
+              <p>
+                نراجع ذلك حسب الواجهات والصلاحيات التي يتيحها مزود نظامك، ونختبر
+                التوفر والحجز والإلغاء ومنع التكرار قبل التشغيل. لا نثبّت شيئاً
+                على نظامك دون اتفاق.
+              </p>
+            </details>
+            <details>
+              <summary>كم التكلفة؟</summary>
+              <p>
+                التجربة الحالية مجانية ولا تتطلب بطاقة دفع. لن يُحسب عليك أي
+                مبلغ دون موافقتك.
+              </p>
+            </details>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section id="setup">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="kicker">ضبط الإعدادات</p>
-        <div>
-          <h2>نشاطك كاملًا.<br><em>والصورة أوضح.</em></h2>
-          <p>خدماتك، أسعارك، أوقات عملك وطلبات عملائك في لوحة واحدة. شاهد جولة فعلية في إعداد نشاط لتأجير السيارات، من ضبط الخدمات حتى إدارة الحجوزات.</p>
+      <section class="final">
+        <div class="wrap">
+          <div>
+            <p class="final-kicker">الخطوة القادمة أبسط مما تتخيّل</p>
+            <h2>خلّ حجوزاتك علينا.<br />وركّز على شغلك.</h2>
+            <p>
+              ابدأ بإعداد مساحة نشاطك. التجربة مجانية خلال الإطلاق، دون بطاقة
+              دفع.
+            </p>
+          </div>
+          <a
+            class="btn solid"
+            href="https://hajozati.onrender.com/start.html"
+            target="_blank"
+            rel="noopener"
+            >أنشئ مساحة نشاطك ←</a
+          >
         </div>
-      </div>
-      <div class="workspace-bar"><span><i></i><i></i><i></i></span><b>مساحة عملك · حجوزاتي</b><span>عرض توضيحي</span></div><div class="watch wide">
-        <div class="clip wide">
-          <video data-lazy-video muted playsinline loop controls preload="none" poster="media/settings-guide-cars.jpg" aria-label="فيديو يشرح ضبط إعدادات معرض تأجير سيارات في لوحة تحكم حجوزاتي" width="1280" height="720">
-            <source data-src="media/settings-guide-cars.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
+    </main>
 
-  <section id="faq">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="kicker">أسئلة</p>
-        <div><h2>أسئلتك، وإجاباتها.</h2></div>
+    <footer>
+      <div class="wrap">
+        <span>حجوزاتي PRO · إطلاق تجريبي 2026</span>
+        <nav aria-label="روابط قانونية">
+          <a
+            href="https://hajozati.onrender.com/privacy.html"
+            target="_blank"
+            rel="noopener"
+            >الخصوصية</a
+          >
+          <a
+            href="https://hajozati.onrender.com/terms.html"
+            target="_blank"
+            rel="noopener"
+            >الشروط</a
+          >
+          <a
+            href="https://hajozati.onrender.com/dashboard.html"
+            target="_blank"
+            rel="noopener"
+            >دخول أصحاب الأنشطة</a
+          >
+        </nav>
       </div>
-      <div class="faq">
-        <details><summary>هل يناسب نشاطي؟</summary><p>إذا كان زبائنك يحجزون وقتاً أو مكاناً أو شيئاً، فغالباً نعم: صالونات، عيادات، قاعات، ملاعب، تأجير سيارات، شقق، تدريب، واستشارات. أنواع الحجز الثلاثة تغطي أغلب الحالات.</p></details>
-        <details><summary>هل أحتاج رقم واتساب جديداً؟</summary><p>لا تحتاجه للبدء. رابط الحجز يعمل الآن وتشاركه من رقمك الحالي. وعند تفعيل البوت على رقم نشاطك نستخدم رقماً تملكه أنت بعد إثبات ملكيته.</p></details>
-        <details><summary>ماذا لو أخطأت في معلومة بعد الملخص؟</summary><p>اكتب التعديل فقط. أي رسالة غير الموافقة تلغي الملخص السابق، ويعرض المساعد ملخصاً جديداً. ولا يُنشأ نشاطك بالبيانات القديمة أبداً.</p></details>
-        <details><summary>هل يمكن ربطه بنظامي الحالي؟</summary><p>نراجع ذلك حسب الواجهات والصلاحيات التي يتيحها مزود نظامك، ونختبر التوفر والحجز والإلغاء ومنع التكرار قبل التشغيل. لا نثبّت شيئاً على نظامك دون اتفاق.</p></details>
-        <details><summary>كم التكلفة؟</summary><p>التجربة الحالية مجانية ولا تتطلب بطاقة دفع. لن يُحسب عليك أي مبلغ دون موافقتك.</p></details>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <section class="final">
-    <div class="wrap">
-      <div>
-        <p class="final-kicker">الخطوة القادمة أبسط مما تتخيّل</p><h2>خلّ حجوزاتك علينا.<br>وركّز على شغلك.</h2>
-        <p>ابدأ بإعداد مساحة نشاطك. التجربة مجانية خلال الإطلاق، دون بطاقة دفع.</p>
-      </div>
-      <a class="btn solid" href="https://hajozati.onrender.com/start.html" target="_blank" rel="noopener">أنشئ مساحة نشاطك ←</a>
-    </div>
-  </section>
-</main>
+    <script>
+      // Videos load only when scrolled near, and autoplay muted unless the viewer prefers reduced motion.
+      (() => {
+        const videos = document.querySelectorAll("video[data-lazy-video]");
+        const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const load = (v) => {
+          if (v.dataset.loaded) return;
+          v.dataset.loaded = "1";
+          for (const s of v.querySelectorAll("source[data-src]"))
+            s.src = s.dataset.src;
+          v.load();
+        };
+        if (!("IntersectionObserver" in window)) {
+          videos.forEach(load);
+          return;
+        }
+        const near = new IntersectionObserver(
+          (entries) => {
+            for (const e of entries)
+              if (e.isIntersecting) {
+                load(e.target);
+                near.unobserve(e.target);
+              }
+          },
+          { rootMargin: "300px 0px" },
+        );
+        const seen = new IntersectionObserver(
+          (entries) => {
+            for (const e of entries) {
+              const v = e.target;
+              if (e.isIntersecting && !still && !v.dataset.userPaused) {
+                load(v);
+                v.play().catch(() => {});
+              } else if (!e.isIntersecting && !v.paused) {
+                v.dataset.auto = "1";
+                v.pause();
+              }
+            }
+          },
+          { threshold: 0.5 },
+        );
+        videos.forEach((v) => {
+          near.observe(v);
+          seen.observe(v);
+          v.addEventListener("pause", () => {
+            if (!v.dataset.auto && document.visibilityState === "visible")
+              v.dataset.userPaused = "1";
+            delete v.dataset.auto;
+          });
+          v.addEventListener("play", () => {
+            delete v.dataset.userPaused;
+          });
+        });
+      })();
+    </script>
 
-<footer>
-  <div class="wrap">
-    <span>حجوزاتي PRO · إطلاق تجريبي 2026</span>
-    <nav aria-label="روابط قانونية">
-      <a href="https://hajozati.onrender.com/privacy.html" target="_blank" rel="noopener">الخصوصية</a>
-      <a href="https://hajozati.onrender.com/terms.html" target="_blank" rel="noopener">الشروط</a>
-      <a href="https://hajozati.onrender.com/dashboard.html" target="_blank" rel="noopener">دخول أصحاب الأنشطة</a>
-    </nav>
-  </div>
-</footer>
-
-<script>
-// Videos load only when scrolled near, and autoplay muted unless the viewer prefers reduced motion.
-(() => {
-  const videos = document.querySelectorAll("video[data-lazy-video]");
-  const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const load = (v) => {
-    if (v.dataset.loaded) return;
-    v.dataset.loaded = "1";
-    for (const s of v.querySelectorAll("source[data-src]")) s.src = s.dataset.src;
-    v.load();
-  };
-  if (!("IntersectionObserver" in window)) { videos.forEach(load); return; }
-  const near = new IntersectionObserver((entries) => {
-    for (const e of entries) if (e.isIntersecting) { load(e.target); near.unobserve(e.target); }
-  }, { rootMargin: "300px 0px" });
-  const seen = new IntersectionObserver((entries) => {
-    for (const e of entries) {
-      const v = e.target;
-      if (e.isIntersecting && !still && !v.dataset.userPaused) { load(v); v.play().catch(() => {}); }
-      else if (!e.isIntersecting && !v.paused) { v.dataset.auto = "1"; v.pause(); }
-    }
-  }, { threshold: 0.5 });
-  videos.forEach((v) => {
-    near.observe(v); seen.observe(v);
-    v.addEventListener("pause", () => { if (!v.dataset.auto && document.visibilityState === "visible") v.dataset.userPaused = "1"; delete v.dataset.auto; });
-    v.addEventListener("play", () => { delete v.dataset.userPaused; });
-  });
-})();
-</script>
-
-<a class="wa-float" href="https://wa.me/19896608479?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AA%D8%AC%D9%87%D9%8A%D8%B2%20%D9%86%D8%B4%D8%A7%D8%B7%D9%8A" target="_blank" rel="noopener" aria-label="راسل حجوزاتي على واتساب"><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8C29 8.7 23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.9-3.9-1.9-6 0-5.9 4.9-10.6 11-10.6s11 4.8 11 10.6-4.9 10.9-10.9 10.9zm6-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.8 1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 2.2.9 3 1 4.1.8.7-.1 1.9-.8 2.2-1.5s.3-1.3.2-1.5c-.1-.1-.3-.2-.6-.4z"/></svg></a>
-</body>
+    <a
+      class="wa-float"
+      href="https://wa.me/19896608479?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AA%D8%AC%D9%87%D9%8A%D8%B2%20%D9%86%D8%B4%D8%A7%D8%B7%D9%8A"
+      target="_blank"
+      rel="noopener"
+      aria-label="راسل حجوزاتي على واتساب"
+      ><svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true">
+        <path
+          fill="currentColor"
+          d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8C29 8.7 23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.9-3.9-1.9-6 0-5.9 4.9-10.6 11-10.6s11 4.8 11 10.6-4.9 10.9-10.9 10.9zm6-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.8 1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 2.2.9 3 1 4.1.8.7-.1 1.9-.8 2.2-1.5s.3-1.3.2-1.5c-.1-.1-.3-.2-.6-.4z"
+        /></svg
+    ></a>
+  </body>
 </html>
