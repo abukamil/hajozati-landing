@@ -656,3 +656,55 @@ footer .wrap {
     border-radius: 8px;
   }
 }
+
+/* Spacing review: one gutter, one rhythm on small screens. */
+@media (max-width: 640px) {
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 32px;
+  }
+  .steps li,
+  .steps li:first-child,
+  .steps li:nth-child(3) {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    column-gap: 16px;
+    align-items: start;
+    padding: 20px 0;
+    border: 0;
+    border-top: 1px solid #d9cdb2;
+  }
+  .steps li:first-child {
+    border-top: 0;
+    padding-top: 4px;
+  }
+  .steps li::before {
+    grid-row: span 2;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    border: 1px solid #d9cdb2;
+    border-radius: 10px;
+    font-size: 13px;
+  }
+  .steps h3 {
+    margin: 2px 0 0;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .steps p {
+    margin-top: 6px;
+    font-size: 14px;
+  }
+  .final {
+    padding-inline: 26px;
+  }
+}
+@media (max-width: 360px) {
+  .final {
+    padding-inline: 20px;
+  }
+}
