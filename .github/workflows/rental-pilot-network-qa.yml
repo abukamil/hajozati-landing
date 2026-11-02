@@ -1,0 +1,46 @@
+name: One-off rental pilot network QA
+on:
+  push:
+    branches: [codex/rental-pilot-network-qa]
+    paths: [.github/workflows/rental-pilot-network-qa.yml]
+permissions: {}
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        host: [hajozati-rentals-api.onrender.com, hajozati-rentals-pilot.onrender.com]
+    steps:
+      - name: Public catalog from independent network, then one request after 16 quiet minutes
+        env:
+          API_HOST: ${{ matrix.host }}
+        run: |
+          python3 -u - <<'PY'
+          import datetime, json, os, time, urllib.request
+          api = 'https://' + os.environ['API_HOST']
+          def probe(phase):
+              start = time.monotonic()
+              result = {'phase': phase, 'api': api, 'startedAt': datetime.datetime.now(datetime.timezone.utc).isoformat()}
+              try:
+                  req = urllib.request.Request(api + '/api/catalog', headers={'Accept': 'application/json', 'X-Hajozati-Client': '1'})
+                  with urllib.request.urlopen(req, timeout=120) as response:
+                      data = json.load(response)
+                      result.update(httpStatus=response.status, fleetCount=len(data['fleet']), preview=data['preview'], platesRedacted=all(v['plate'] == '' for v in data['fleet']))
+                  result['status'] = 'passed' if result['httpStatus'] == 200 and result['preview'] and result['fleetCount'] >= 3 and result['platesRedacted'] else 'failed'
+              except Exception as error:
+                  result.update(status='failed', errorType=type(error).__name__)
+              result['elapsedMilliseconds'] = round((time.monotonic() - start) * 1000)
+              print(json.dumps(result), flush=True)
+              return result
+          first = probe('initial-independent-network')
+          quiet = time.monotonic()
+          print('No API requests from this job for 960 seconds. Other traffic is uncontrolled.', flush=True)
+          while time.monotonic() - quiet < 960:
+              time.sleep(1)
+          final = probe('after-16-quiet-minutes')
+          final['agentQuietWindowSeconds'] = round(time.monotonic() - quiet - final['elapsedMilliseconds'] / 1000)
+          print(json.dumps(final), flush=True)
+          assert final['status'] == 'passed' and final['elapsedMilliseconds'] < 70000
+          PY
