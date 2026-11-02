@@ -1,27 +1,38 @@
 {
-  "version": "1.0.0",
-  "versionCode": "4",
+  "version": "1.1.0",
+  "versionCode": "8",
   "pilotExpires": "2026-12-01",
   "apps": [
     {
       "role": "customer",
       "label": "حجوزاتي",
       "package": "com.hajozati.customer",
-      "url": "https://github.com/abukamil/hajozati-landing/releases/download/android-pilot-2026-11-01/hajozati-customer-1.0.0-4.apk",
-      "file": "hajozati-customer-1.0.0-4.apk",
-      "sha256": "4602ccd249e70c5ec54ae1c8f14ca4d313adf6a79772bf67c7cf927dbcd8f6ca",
-      "bytes": 95050653,
-      "minimumAndroidSdk": "24"
+      "url": "https://abukamil.github.io/hajozati-landing/trial/downloads/hajozati-customer-1.1.0-8.apk",
+      "file": "hajozati-customer-1.1.0-8.apk",
+      "sha256": "ed1feb1c106806bf1aeee97a5c3024818dadfb7104c8fcd1e01f5dd97aff540d",
+      "bytes": 48890823,
+      "minimumAndroidSdk": "24",
+      "signingCertSha256": "302ef008872875d63fb200b9b21f9714b795c5ef6e7d88a554b0e05a2a4ebf25",
+      "abis": [
+        "arm64-v8a",
+        "armeabi-v7a"
+      ]
     },
     {
       "role": "owner",
       "label": "حجوزاتي أعمال",
       "package": "com.hajozati.business",
-      "url": "https://github.com/abukamil/hajozati-landing/releases/download/android-pilot-2026-11-01/hajozati-business-1.0.0-4.apk",
-      "file": "hajozati-business-1.0.0-4.apk",
-      "sha256": "0d897cdc093838754edcd5e7e5137fa0d50b138651dbd32fc92f95017e5088f0",
-      "bytes": 95050677,
-      "minimumAndroidSdk": "24"
+      "url": "https://abukamil.github.io/hajozati-landing/trial/downloads/hajozati-business-1.1.0-8.apk",
+      "file": "hajozati-business-1.1.0-8.apk",
+      "sha256": "30dc49b5b9d8f10fd4dc8bc8a6e0f193f76496761ba0c06783c2ddc2b395d4a6",
+      "bytes": 48890851,
+      "minimumAndroidSdk": "24",
+      "signingCertSha256": "4cce584091ec49e2d7885ce8ecaadd9442619a8ed38bcc81b41df5a5c72dec67",
+      "abis": [
+        "arm64-v8a",
+        "armeabi-v7a"
+      ]
     }
-  ]
+  ],
+  "signingKeyChanged": "2026-11-02: uninstall 1.0.0 before installing 1.1.0"
 }
